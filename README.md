@@ -19,7 +19,7 @@
 
 ### Fundamentals of Machine Learning
 
-- Explain Epoch, Batch, Batch Size, and Iteration.
+1. Explain Epoch, Batch, Batch Size, and Iteration.
   - Answer:
     - **Epoch**: One complete pass through the entire training dataset
     - **Batch**: A subset of the training data used in one iteration
@@ -29,7 +29,7 @@
     - **Larger batch sizes**: More stable gradients but require more memory and may generalize worse
     - **Smaller batches**: Add noise which can help escape local minima but training is less stable
     - Number of epochs determines how many times the model sees the entire dataset during training
-- What are embeddings in Machine Learning?
+2. What are embeddings in Machine Learning?
   - Answer:
     - Dense, low-dimensional vector representations of high-dimensional or categorical data
     - Capture semantic relationships between items
@@ -42,7 +42,7 @@
       - Enable arithmetic operations
       - Work well with neural networks
     - **Common types**: Word embeddings (Word2Vec, GloVe), entity embeddings for categorical features, image embeddings from CNNs, learned embeddings in recommendation systems
-- What is Softmax Activation Function?
+3. What is Softmax Activation Function?
   - Answer:
     - Converts a vector of raw scores (logits) into a probability distribution
     - All output values sum to 1
@@ -56,7 +56,7 @@
     - Class with highest probability is the prediction
     - Unlike sigmoid (binary), softmax handles multiple mutually exclusive classes
     - Temperature parameter can control the "sharpness" of the distribution
-- What is Machine Learning?
+4. What is Machine Learning?
   - Answer:
     - Subset of AI that enables systems to learn and improve from experience without being explicitly programmed
     - Instead of writing rules, we provide data and let algorithms discover patterns
@@ -72,7 +72,7 @@
       - Need to scale to large data
     - **Applications**: Image recognition, recommendation systems, fraud detection, natural language processing
     - Key: Performance improves with more data and experience
-- Differentiate between Supervised and Unsupervised Learning.
+5. Differentiate between Supervised and Unsupervised Learning.
   - Answer:
     - **Supervised Learning**:
       - Uses labeled data where each input has a corresponding output
@@ -86,7 +86,7 @@
       - **Examples**: Clustering (customer segmentation), dimensionality reduction (PCA), anomaly detection
       - **Algorithms**: K-means, hierarchical clustering, autoencoders
       - Works with abundant unlabeled data but evaluation is subjective
-- What is Reinforcement Learning?
+6. What is Reinforcement Learning?
   - Answer:
     - Learning through interaction with an environment to maximize cumulative reward
     - Agent takes actions, receives rewards or penalties, and learns optimal behavior through trial and error
@@ -100,7 +100,7 @@
     - Agent learns a policy that maximizes long-term reward, not just immediate reward
     - **Examples**: Game playing (AlphaGo, chess), robotics, autonomous driving, resource optimization
     - Unlike supervised learning, there's no labeled data; agent learns from consequences of its actions
-- What is Bias?
+7. What is Bias?
   - Answer:
     - In neural networks, **bias** is a learnable parameter added to the weighted sum of inputs before applying activation function
     - **Formula**: output = activation(Σ(weight × input) + bias)
@@ -112,7 +112,7 @@
     - Each neuron typically has its own bias term
     - Helps the model learn patterns that don't start at zero
     - Improves the model's ability to fit the training data
-- What is the difference between Classification and Regression?
+8. What is the difference between Classification and Regression?
   - Answer:
     - **Classification**:
       - Predicts discrete categorical labels (classes)
@@ -128,7 +128,7 @@
       - **Algorithms**: Linear regression, polynomial regression, neural networks with linear output
     - **Key difference**: Classification outputs categories, regression outputs numbers
     - Some algorithms can do both with different output layers
-- Explain Overfitting and Underfitting. How can you prevent them?
+9. Explain Overfitting and Underfitting. How can you prevent them?
   - Answer:
     - **Overfitting**:
       - Model learns training data too well, including noise and outliers
@@ -151,7 +151,7 @@
       4. Train longer
       5. Use more powerful model architecture
     - Goal: Find the sweet spot where model generalizes well without being too simple or too complex
-- What Are L1 and L2 Loss Functions?
+10. What Are L1 and L2 Loss Functions?
   - Answer:
     - **L1 Loss (Mean Absolute Error)**:
       - Calculates average absolute difference between predicted and actual values
@@ -170,7 +170,7 @@
       - L1 can be used for feature selection (Lasso)
       - L2 for regularization (Ridge)
     - **When to use**: L1 when outliers are expected, L2 for smooth optimization
-- What is Regularization? Explain L1 (Lasso) and L2 (Ridge) regularization.
+11. What is Regularization? Explain L1 (Lasso) and L2 (Ridge) regularization.
   - Answer:
     - Regularization adds a penalty term to the loss function to prevent overfitting by constraining model complexity
     - **L2 Regularization (Ridge)**:
@@ -188,7 +188,7 @@
     - **λ (lambda)**: Controls regularization strength (higher λ = more regularization)
     - **Elastic Net**: Combines both L1 and L2
     - Regularization improves generalization by preventing the model from fitting noise
-- What are Loss Functions and Cost Functions? Explain the key difference between them.
+12. What are Loss Functions and Cost Functions? Explain the key difference between them.
   - Answer:
     - **Loss Function**:
       - Measures error for a single training example
@@ -208,7 +208,7 @@
       3. Use gradient descent to minimize cost
     - In practice, people often use these terms interchangeably
     - Technically: loss is per-sample, cost is the overall objective we optimize
-- What are dropouts?
+13. What are dropouts?
   - Answer:
     - Regularization technique that randomly "drops" (sets to zero) a fraction of neurons during training
     - Each neuron has probability p (typically 0.2-0.5) of being temporarily removed along with its connections
@@ -222,7 +222,7 @@
     - **During inference**: Dropout is turned off and all neurons are used (with weights scaled appropriately)
     - One of the most effective techniques for preventing overfitting in deep neural networks
     - Especially effective in fully connected layers
-- What is a Perceptron?
+14. What is a Perceptron?
   - Answer:
     - Simplest neural network unit consisting of a single neuron
     - Takes multiple inputs, applies weights, adds bias, and passes through activation function (typically step function)
@@ -236,7 +236,7 @@
     - Modern deep learning uses multiple perceptrons in layers (Multi-Layer Perceptron) with non-linear activations
     - Overcomes linear separability limitation through multiple layers
     - **Historical significance**: Introduced in 1958, laid foundation for neural networks despite limitations
-- Explain Multilayer Perception (MLP).
+15. Explain Multilayer Perception (MLP).
   - Answer:
     - Feedforward neural network with multiple layers: input layer, one or more hidden layers, and output layer
     - Each layer consists of multiple perceptrons (neurons) fully connected to the next layer
@@ -248,7 +248,7 @@
     - **Universal function approximators**: Can approximate any continuous function given enough neurons
     - **Use cases**: Classification and regression on structured/tabular data
     - Modern deep learning builds on MLPs with specialized architectures like CNNs and RNNs
-- What is Cross-Entropy?
+16. What is Cross-Entropy?
   - Answer:
     - Measures the difference between two probability distributions: true distribution (actual labels) and predicted distribution (model output)
     - For classification, quantifies how well predicted probabilities match true labels
@@ -263,7 +263,7 @@
     - When model is certain and correct, loss is near zero
     - When certain and wrong, loss is very high
     - Encourages the model to output calibrated probabilities
-- What are Logits?
+17. What are Logits?
   - Answer:
     - Raw, unnormalized output scores from a neural network before applying final activation function (softmax or sigmoid)
     - Direct output of the last linear layer
@@ -273,7 +273,7 @@
     - **Term origin**: From logistic regression where logit is the log-odds: logit(p) = log(p/(1-p))
     - **In practice**: Often compute loss directly on logits (e.g., cross_entropy_from_logits) for numerical stability
     - Avoids potential overflow/underflow issues from computing softmax first
-- Explain Cross-Validation. Why is it used?
+18. Explain Cross-Validation. Why is it used?
   - Answer:
     - Technique to assess model performance and generalization by splitting data into multiple folds
     - **K-Fold CV process**:
@@ -295,7 +295,7 @@
       - Leave-One-Out (K=n)
       - Time-series split (respects temporal order)
     - **Trade-off**: More reliable estimates but K times more computation
-- What are precision, recall, and F1-score?
+19. What are precision, recall, and F1-score?
   - Answer:
     - **Precision**:
       - Measures how many of the predicted positive cases are actually positive
@@ -312,7 +312,7 @@
       - **Formula**: 2 × (Precision × Recall) / (Precision + Recall)
       - Provides single metric that balances both
       - Use when you need balance or have imbalanced classes
-- What is anomaly detection?
+20. What is anomaly detection?
   - Answer:
     - Identifies rare items, events, or observations that differ significantly from the majority of data
     - **Use cases**:
@@ -325,7 +325,7 @@
       - Deep learning approaches (autoencoders)
     - **Key challenge**: Anomalies are rare by definition, making supervised learning difficult
     - Unsupervised or semi-supervised methods are often preferred
-- What is the difference between policy-based and value-based methods?
+21. What is the difference between policy-based and value-based methods?
   - Answer:
     - In reinforcement learning context
     - **Value-based methods** (Q-learning, DQN):
@@ -340,7 +340,7 @@
       - Can learn stochastic policies
       - Have higher variance
     - **Actor-Critic methods**: Combine both approaches
-- What is Q-Learning?
+22. What is Q-Learning?
   - Answer:
     - Model-free, value-based reinforcement learning algorithm
     - Learns optimal action-selection policy by estimating Q-values (quality of state-action pairs)
@@ -352,7 +352,7 @@
       - Updates Q-table or Q-network
     - **Off-policy**: Learns optimal policy while following exploratory policy (like ε-greedy)
     - **Deep Q-Networks (DQN)**: Extend to high-dimensional state spaces using neural networks
-- Explain the concept of exploration vs exploitation.
+23. Explain the concept of exploration vs exploitation.
   - Answer:
     - Fundamental trade-off in reinforcement learning
     - **Exploitation**:
@@ -366,7 +366,7 @@
       - Softmax/Boltzmann exploration: Probabilistic based on Q-values
       - Upper Confidence Bound (UCB): Balances both systematically
     - **Balance**: Typically shifts from more exploration early in training to more exploitation later
-- Explain the curse of dimensionality and how to address it.
+24. Explain the curse of dimensionality and how to address it.
   - Answer:
     - As number of features increases, volume of feature space grows exponentially, making data sparse
     - **Problems caused**:
@@ -379,7 +379,7 @@
       3. **Regularization**: L1/L2 to prevent overfitting
       4. **Domain knowledge**: Engineer meaningful features
       5. **Manifold learning**: Assume data lies on a lower-dimensional manifold
-- Explain Local Loss, Focal Loss, and Gradient Blending in the context of Multi-Task Learning.
+25. Explain Local Loss, Focal Loss, and Gradient Blending in the context of Multi-Task Learning.
   - Answer:
     - In multi-task learning context
     - **Local Loss**:
@@ -396,7 +396,7 @@
 
 ### Algorithms
 
-- How does a Decision Tree algorithm work?
+1. How does a Decision Tree algorithm work?
   - Answer:
     - Recursively splits data based on features to create a tree structure
     - **At each node**:
@@ -413,7 +413,7 @@
     - **Disadvantages**:
       - High variance (overfitting)
       - Instability to small data changes
-- Explain how Decision Trees make splits and handle categorical features.
+2. Explain how Decision Trees make splits and handle categorical features.
   - Answer:
     - **For numerical features**:
       - Trees evaluate all possible split points
@@ -427,7 +427,7 @@
     - Trees naturally handle categorical features without encoding
     - **Caution**: High-cardinality categories can cause overfitting
     - Some implementations (like XGBoost) require one-hot encoding
-- How does the Random Forest algorithm work? How does it improve over Decision Trees? How does it reduce variance?
+3. How does the Random Forest algorithm work? How does it improve over Decision Trees? How does it reduce variance?
   - Answer:
     - Ensemble of decision trees trained on random subsets of data (bagging) and random subsets of features at each split
     - **Prediction process**:
@@ -439,7 +439,7 @@
       3. **Improving generalization**: Without significantly increasing bias
     - **Key principle**: Errors of individual trees cancel out when averaged
     - **Feature randomness**: Ensures trees are decorrelated, crucial for variance reduction
-- Explain Ensemble Methods. Why are they powerful?
+4. Explain Ensemble Methods. Why are they powerful?
   - Answer:
     - Combine multiple models to produce better predictions than individual models
     - **Why powerful**:
@@ -453,7 +453,7 @@
       - **Boosting**: Sequential training, reduces bias
       - **Stacking**: Meta-model combines base models
     - **Success depends on**: Model diversity and appropriate combination strategy
-- What is the difference between bagging and boosting?
+5. What is the difference between bagging and boosting?
   - Answer:
     - **Bagging (Bootstrap Aggregating)**:
       - Trains models independently in parallel
@@ -470,7 +470,7 @@
       - **Examples**: AdaBoost, XGBoost
       - Works well with high-bias models (shallow trees)
       - More prone to overfitting but typically achieves better performance
-- What is Gradient Boosting? How does XGBoost work?
+6. What is Gradient Boosting? How does XGBoost work?
   - Answer:
     - **Gradient Boosting**:
       - Builds ensemble of weak learners (typically shallow trees) sequentially
@@ -485,7 +485,7 @@
       5. **Built-in cross-validation**
       6. **Sparsity awareness**
     - XGBoost is highly efficient and often wins competitions
-- What are the key hyperparameters for XGBoost?
+7. What are the key hyperparameters for XGBoost?
   - Answer:
     - **Key hyperparameters**:
       1. **n_estimators**: Number of trees (more trees = better fit but slower)
@@ -496,7 +496,7 @@
       6. **colsample_bytree**: Fraction of features per tree (0.5-1.0)
       7. **gamma**: Minimum loss reduction for split (regularization)
       8. **lambda/alpha**: L2/L1 regularization terms
-- Explain Gradient Boosting and its advantages over Random Forests.
+8. Explain Gradient Boosting and its advantages over Random Forests.
   - Answer:
     - Gradient Boosting builds trees sequentially (each correcting previous errors)
     - Random Forest builds trees independently in parallel
@@ -511,9 +511,9 @@
       3. **More hyperparameters**: To tune
       4. **Less parallelizable**
     - **Random Forest**: Faster, more robust, easier to tune (better for quick baselines)
-- Explain how Logistic Regression differs from Linear Regression.
+9. Explain how Logistic Regression differs from Linear Regression.
   - Answer: [Linear Regression vs Logistic Regression](https://outcomeschool.com/blog/linear-regression-vs-logistic-regression)
-- How does logistic regression work?
+10. How does logistic regression work?
   - Answer:
     - Models probability of a binary outcome using logistic (sigmoid) function
     - **Formula**: P(y=1) = 1/(1+e^(-z)), where z = w₀ + w₁x₁ + ... + wₙxₙ
@@ -524,7 +524,7 @@
     - **Assumptions**: Linear relationship between features and log-odds
     - Works well when classes are linearly separable
     - **Advantages**: Interpretable, fast, provides probability estimates
-- Explain R-squared and adjusted R-squared.
+11. Explain R-squared and adjusted R-squared.
   - Answer:
     - **R-squared (coefficient of determination)**:
       - Measures proportion of variance in dependent variable explained by the model
@@ -538,7 +538,7 @@
       - Only increases if new features improve model more than expected by chance
     - **Usage**: Use adjusted R² for model comparison, especially with different numbers of features
     - **Note**: Neither indicates causation or model correctness
-- How do you check for multicollinearity in regression models?
+12. How do you check for multicollinearity in regression models?
   - Answer:
     - Multicollinearity occurs when features are highly correlated, causing unstable coefficient estimates
     - **Detection methods**:
@@ -552,7 +552,7 @@
       3. Use regularization (Ridge/Lasso)
       4. Collect more data
     - **Note**: Multicollinearity doesn't affect predictions but makes interpretation unreliable
-- How does K-Nearest Neighbors (KNN) work?
+13. How does K-Nearest Neighbors (KNN) work?
   - Answer:
     - Non-parametric, instance-based algorithm
     - **For prediction**:
@@ -565,7 +565,7 @@
       4. **Curse of dimensionality**: Performance degrades in high dimensions
     - **Advantages**: Simple and effective
     - **Disadvantages**: Computationally expensive at prediction time, sensitive to irrelevant features
-- Explain K-Means Clustering. How does it work? Limitations?
+14. Explain K-Means Clustering. How does it work? Limitations?
   - Answer:
     - Partitions data into K clusters
     - **Algorithm**:
@@ -582,7 +582,7 @@
       5. Only finds linear boundaries
       6. Doesn't work well with varying densities
     - **Alternatives**: DBSCAN, hierarchical clustering, Gaussian Mixture Models
-- Explain Support Vector Machines (SVM). What is the kernel trick?
+15. Explain Support Vector Machines (SVM). What is the kernel trick?
   - Answer:
     - SVM finds optimal hyperplane that maximizes margin between classes
     - Focuses on support vectors (points closest to decision boundary)
@@ -597,7 +597,7 @@
     - Kernel computes dot products in high-dimensional space efficiently
     - **Advantages**: Works well in high dimensions, clear margins
     - **Disadvantages**: Slow on large datasets, sensitive to feature scaling and hyperparameters (C, gamma)
-- What is the decision boundary in classifiers?
+16. What is the decision boundary in classifiers?
   - Answer:
     - Surface that separates different classes in feature space
     - For binary classification: where P(class=1) = P(class=0) = 0.5
@@ -610,7 +610,7 @@
     - **Complexity matching**: Decision boundary complexity should match problem complexity
     - Too simple → underfitting
     - Too complex → overfitting
-- Explain Naive Bayes.
+17. Explain Naive Bayes.
   - Answer:
     - Applies Bayes' theorem with "naive" assumption that features are conditionally independent given the class
     - **Formula**: P(y|x) = P(x|y)P(y)/P(x)
@@ -625,7 +625,7 @@
       - Requires little training data
       - Works surprisingly well for text classification
     - **Disadvantages**: Independence assumption can limit accuracy
-- What is Dimensionality Reduction?
+18. What is Dimensionality Reduction?
   - Answer:
     - Transforms high-dimensional data into lower dimensions while preserving important information
     - **Benefits**:
@@ -641,7 +641,7 @@
          - PCA, t-SNE, autoencoders
     - **Trade-off**: Information loss vs. simplicity
     - **Use when**: Many features, computational constraints, or need visualization
-- Explain PCA (Principal Component Analysis). How does it work? When would you use it?
+19. Explain PCA (Principal Component Analysis). How does it work? When would you use it?
   - Answer:
     - Finds orthogonal directions (principal components) of maximum variance in data
     - **Steps**:
@@ -660,7 +660,7 @@
       1. Features are already uncorrelated
       2. Non-linear relationships exist (use kernel PCA or t-SNE)
       3. Interpretability is crucial (PCs are linear combinations)
-- Explain Gradient Descent and its variants.
+20. Explain Gradient Descent and its variants.
   - Answer:
     - Minimizes loss by iteratively updating parameters in direction of steepest descent
     - **Formula**: θ = θ - α∇J(θ)
@@ -673,7 +673,7 @@
       6. **RMSprop**: Uses moving average of squared gradients
       7. **Adam**: Combines momentum and RMSprop (most popular)
     - **Choice depends on**: Dataset size, convergence speed needs, computational resources
-- What is the ROC-AUC curve, and how is it interpreted?
+21. What is the ROC-AUC curve, and how is it interpreted?
   - Answer:
     - **ROC (Receiver Operating Characteristic) curve**:
       - Plots True Positive Rate (TPR = recall) vs. False Positive Rate (FPR = 1-specificity)
@@ -692,11 +692,11 @@
 
 ### Data Preprocessing and Feature Engineering
 
-- What is Feature Engineering?
+1. What is Feature Engineering?
   - Answer: [Feature Engineering in Machine Learning](https://www.youtube.com/watch?v=QLlywrWuXag)
-- What is one-hot encoding? When should you use it?
+2. What is one-hot encoding? When should you use it?
   - Answer: [One-hot Encoding in Machine Learning](https://www.youtube.com/watch?v=6AmedU5i9go)
-- How do you deal with missing data?
+3. How do you deal with missing data?
   - Answer:
     - Strategies depend on amount and pattern of missing data
     - **Deletion**:
@@ -713,7 +713,7 @@
     - **Indicator variable**: Add binary flag for missingness (captures information)
     - **Use algorithms that handle missing values**: XGBoost, LightGBM
     - **First step**: Analyze if data is MCAR (Missing Completely At Random), MAR (Missing At Random), or MNAR (Missing Not At Random) to choose appropriate strategy
-- How do you handle Outliers?
+4. How do you handle Outliers?
   - Answer:
     - **First step**: Determine if outliers are errors or genuine extreme values
     - **Detection methods**:
@@ -728,7 +728,7 @@
       5. **Use robust algorithms**: Tree-based models
       6. **Keep them**: If they represent important patterns
     - **Context matters**: Outliers in fraud detection are the signal, not noise
-- Explain Feature Scaling. Why is it needed?
+5. Explain Feature Scaling. Why is it needed?
   - Answer:
     - Feature scaling transforms features to similar ranges
     - **Why needed**:
@@ -749,7 +749,7 @@
          - Uses median and IQR
          - Robust to outliers
     - **Note**: Tree-based models don't need scaling
-- One-Hot, Label, Target, and K-Fold Target Encoding
+6. One-Hot, Label, Target, and K-Fold Target Encoding
   - Answer:
     - **One-Hot Encoding**:
       - Creates binary columns for each category
@@ -769,7 +769,7 @@
       - For each fold, encode using other folds' statistics
       - Reduces overfitting while maintaining benefits of target encoding
     - **Use case**: Target encoding for high-cardinality features in gradient boosting models
-- How do you handle Categorical Features?
+7. How do you handle Categorical Features?
   - Answer:
     - Depends on cardinality and model type
     - **Low cardinality (<10 categories)**:
@@ -788,7 +788,7 @@
       - TF-IDF or embeddings
     - **Avoid**: One-hot encoding for high cardinality (curse of dimensionality)
     - **Consider**: Domain knowledge for meaningful groupings
-- Explain Feature selection vs feature extraction.
+8. Explain Feature selection vs feature extraction.
   - Answer:
     - **Feature Selection** - chooses subset of original features:
       1. **Filter methods**: Statistical tests (correlation, chi-square, mutual information)
@@ -802,7 +802,7 @@
     - **When to use**:
       - Selection: When interpretability matters
       - Extraction: When performance is priority
-- How would you create new features from existing ones?
+9. How would you create new features from existing ones?
   - Answer:
     - **Feature engineering strategies**:
       1. **Mathematical transformations**: Log, sqrt, polynomial, ratios
@@ -817,7 +817,7 @@
       - Use domain knowledge to guide creation
       - Validate with feature importance
       - Use cross-validation to avoid overfitting
-- How do you approach a dataset with highly imbalanced classes?
+10. How do you approach a dataset with highly imbalanced classes?
   - Answer:
     - **Strategies include**:
       1. **Resampling**:
@@ -832,7 +832,7 @@
       8. **Collect more data**: For minority class
     - **Best practice**: Combine multiple approaches
     - **Avoid**: Accuracy as metric—it's misleading with imbalance
-- How do you select features for a model?
+11. How do you select features for a model?
   - Answer:
     - Use a combination of methods:
       1. **Domain knowledge**: Start with features that make business sense
@@ -847,7 +847,7 @@
       7. **Cross-validation**: Validate selections don't overfit
     - **Balance**: Model performance, interpretability, and computational cost
     - **Monitor**: Feature leakage
-- Why and how do you split data into a train, test, and validation set?
+12. Why and how do you split data into a train, test, and validation set?
   - Answer:
     - **Why**: To evaluate model generalization and prevent overfitting
     - **Train set (60-80%)**:
@@ -867,7 +867,7 @@
 
 ### Optimization
 
-- What is gradient descent? How does it work?
+1. What is gradient descent? How does it work?
   - Answer:
     - Iterative optimization algorithm that minimizes a loss function
     - Moves in the direction of steepest descent
@@ -878,7 +878,7 @@
     - Foundation of training most ML models
     - **Challenge**: Can get stuck in local minima for non-convex functions
     - **Important factors**: Initialization and learning rate
-- What is stochastic gradient descent (SGD)?
+2. What is stochastic gradient descent (SGD)?
   - Answer:
     - Updates parameters using one random sample at a time instead of entire dataset
     - Much faster per iteration
@@ -891,7 +891,7 @@
       - Accumulates velocity to accelerate convergence
       - Dampens oscillations
     - Standard for training deep learning models on large datasets
-- What are vanishing gradients?
+3. What are vanishing gradients?
   - Answer:
     - Gradients become extremely small during backpropagation in deep networks
     - Causes early layers to learn very slowly or not at all
@@ -905,7 +905,7 @@
       4. **Better initialization**: Xavier/He initialization
       5. **LSTM/GRU**: For RNNs, use gating mechanisms
     - **Opposite problem**: Exploding gradients (solved by gradient clipping)
-- What is a learning rate? How to choose a good one?
+4. What is a learning rate? How to choose a good one?
   - Answer:
     - Learning rate (α) controls step size in gradient descent
     - **Too large**: Causes overshooting and divergence
@@ -918,7 +918,7 @@
       4. **Adaptive optimizers**: Adam, RMSprop adjust rates automatically
       5. **Warm-up**: Start small, gradually increase
     - **Monitoring**: If loss not decreasing, reduce learning rate
-- How does the learning rate affect model training?
+5. How does the learning rate affect model training?
   - Answer:
     - One of the most important hyperparameters
     - **Too high**:
@@ -937,7 +937,7 @@
       2. **Cyclical learning rates**: Cycle between bounds to escape local minima
       3. **Warm restarts**: Periodically reset to higher rate
     - Modern optimizers like Adam adapt learning rates per parameter automatically
-- How do you approach hyperparameter tuning?
+6. How do you approach hyperparameter tuning?
   - Answer:
     - **Systematic approach**:
       1. **Start with defaults**: Use proven configurations
@@ -951,7 +951,7 @@
       6. **Monitor metrics**: Track both training and validation performance
       7. **Use tools**: Optuna, Ray Tune, Hyperopt
     - **Budget time wisely**: Some hyperparameters matter more than others
-- What is model quantization, and when would you use it?
+7. What is model quantization, and when would you use it?
   - Answer:
     - Reduces model size and inference time by converting weights and activations from 32-bit floats to lower precision
     - **Types**:
@@ -968,7 +968,7 @@
       3. Have memory constraints
       4. Slight accuracy loss is acceptable
     - Modern frameworks (TensorFlow Lite, PyTorch Mobile) make this easy
-- How do you ensure fairness and reduce bias in ML models?
+8. How do you ensure fairness and reduce bias in ML models?
   - Answer:
     - Fairness requires intentional effort
     - **Strategies**:
@@ -982,7 +982,7 @@
       8. **Regular monitoring**: Track fairness metrics in production
     - **Tools**: Fairlearn, AI Fairness 360
     - **Remember**: Fairness definitions can conflict; choose based on context
-- Explain Grid Search vs Random Search vs Bayesian Optimization.
+9. Explain Grid Search vs Random Search vs Bayesian Optimization.
   - Answer:
     - **Grid Search**:
       - Exhaustively tries all combinations in predefined grid
@@ -1001,7 +1001,7 @@
       - Grid search: 2-3 hyperparameters
       - Random search: Quick exploration
       - Bayesian optimization: Expensive evaluations (deep learning)
-- Explain TPE hyperparameter optimization.
+10. Explain TPE hyperparameter optimization.
   - Answer:
     - TPE (Tree-structured Parzen Estimator) is a Bayesian optimization algorithm
     - Used in Optuna and Hyperopt
@@ -1018,7 +1018,7 @@
       - Handles conditional hyperparameters well
       - Scales better than Gaussian Processes to high dimensions
     - Particularly effective for neural network hyperparameter tuning
-- Explain Bayesian Optimization.
+11. Explain Bayesian Optimization.
   - Answer:
     - Efficiently finds optimal hyperparameters by building probabilistic surrogate model
     - **Process**:
@@ -1032,7 +1032,7 @@
       - Especially when evaluations are expensive (training deep networks)
     - **Works well**: Low-to-medium dimensions (<20)
     - **Struggles**: High-dimensional spaces
-- Explain Adam Optimizer.
+12. Explain Adam Optimizer.
   - Answer:
     - Adam (Adaptive Moment Estimation) combines momentum and RMSprop
     - **Maintains two moving averages**:
@@ -1046,7 +1046,7 @@
     - **Default hyperparameters** (work well for most problems):
       - β₁=0.9, β₂=0.999, α=0.001
     - Most popular optimizer for deep learning due to adaptive learning rates and robustness
-- Explain the RMSprop Optimizer.
+13. Explain the RMSprop Optimizer.
   - Answer:
     - RMSprop (Root Mean Square Propagation) adapts learning rates for each parameter
     - Divides by running average of recent gradient magnitudes
@@ -1059,7 +1059,7 @@
     - Designed for RNNs but works well generally
     - **Similar to AdaGrad** but uses moving average instead of accumulating all past gradients
     - Prevents learning rate decay
-- What is Adagrad Optimizer?
+14. What is Adagrad Optimizer?
   - Answer:
     - Adagrad (Adaptive Gradient) adapts learning rates for each parameter
     - Based on historical gradient information
@@ -1077,7 +1077,7 @@
 
 ### Deep Learning
 
-- What are neural networks?
+1. What are neural networks?
   - Answer:
     - Computational models inspired by biological neurons
     - Consist of interconnected layers of nodes (neurons)
@@ -1092,7 +1092,7 @@
     - Excel at learning complex non-linear patterns from data
     - **Deep neural networks**: Multiple hidden layers can learn hierarchical representations
     - **Powerful for**: Image recognition, NLP, speech processing
-- Explain Feedforward Neural Network.
+2. Explain Feedforward Neural Network.
   - Answer:
     - Simplest type where information flows in one direction from input to output
     - No cycles
@@ -1103,7 +1103,7 @@
     - **Unlike RNNs**: Don't have memory of previous inputs
     - Suitable for problems where inputs are independent
     - Also called Multi-Layer Perceptron (MLP) when it has multiple layers
-- What are forward propagation and backward propagation?
+3. What are forward propagation and backward propagation?
   - Answer:
     - **Forward Propagation**:
       - Process of passing input data through network to generate predictions
@@ -1121,7 +1121,7 @@
       1. Forward pass computes loss
       2. Backward pass computes gradients
       3. Optimizer updates weights
-- What is backpropagation?
+4. What is backpropagation?
   - Answer:
     - Algorithm for computing gradients of loss function with respect to network weights
     - Uses chain rule
@@ -1135,7 +1135,7 @@
     - Gradients used by optimizers (SGD, Adam) to update weights
     - Made training deep networks feasible
     - Fundamental to modern deep learning
-- Can you name and explain a few hyperparameters used for training a neural network?
+5. Can you name and explain a few hyperparameters used for training a neural network?
   - Answer:
     - **Key hyperparameters**:
       1. **Learning rate**: Step size for weight updates (0.001-0.1), most critical
@@ -1149,7 +1149,7 @@
       9. **Momentum**: For SGD (0.9)
       10. **Learning rate schedule**: Decay strategy
     - Tuning these significantly impacts performance
-- What is the advantage of deep learning over traditional machine learning?
+6. What is the advantage of deep learning over traditional machine learning?
   - Answer:
     - **Deep learning advantages**:
       1. **Automatic feature learning**: No manual feature engineering needed, learns hierarchical representations
@@ -1164,7 +1164,7 @@
       - Less interpretable
       - Needs more hyperparameter tuning
     - **Traditional ML better for**: Small datasets, tabular data, interpretability requirements, limited compute resources
-- What are activation functions, and why are they used?
+7. What are activation functions, and why are they used?
   - Answer:
     - Introduce non-linearity into neural networks
     - Enable learning complex patterns
@@ -1180,7 +1180,7 @@
       - Tanh (hidden layers)
       - Softmax (multi-class output)
     - Choice affects training speed, gradient flow, and model performance
-- Explain Sigmoid, Tanh, ReLU, LeakyReLU, and Softmax activation functions with their pros and cons.
+8. Explain Sigmoid, Tanh, ReLU, LeakyReLU, and Softmax activation functions with their pros and cons.
   - Answer:
     - **Sigmoid**: σ(x)=1/(1+e^(-x)), range [0,1]
       - Pros: Smooth, interpretable as probability
@@ -1197,7 +1197,7 @@
     - **Softmax**: e^(x_i)/Σe^(x_j), outputs probability distribution
       - Pros: Multi-class probabilities sum to 1
       - Cons: Only for output layer
-- Why are Sigmoid and Tanh not preferred in the hidden layers of a neural network?
+9. Why are Sigmoid and Tanh not preferred in the hidden layers of a neural network?
   - Answer:
     - Both suffer from **vanishing gradient problem**
     - **Derivatives are small**:
@@ -1214,7 +1214,7 @@
       - Computationally cheap
       - Create sparse representations
     - **Use sigmoid/tanh**: Only for output layers when needed
-- What is dropout, and why is it effective?
+10. What is dropout, and why is it effective?
   - Answer:
     - Randomly sets fraction (typically 0.2-0.5) of neuron outputs to zero during training
     - Each training iteration uses different random subset of neurons
@@ -1226,7 +1226,7 @@
       4. **Forces redundancy**: Network learns robust features
     - **During inference**: Dropout turned off, weights scaled by dropout rate
     - One of most effective regularization techniques for neural networks
-- What is the effect of dropout on training and inference speed?
+11. What is the effect of dropout on training and inference speed?
   - Answer:
     - **Training**:
       - Slightly slows training because:
@@ -1241,7 +1241,7 @@
       - In older implementations, weights scaled at inference (adds minimal computation)
     - **Overall**: Dropout's impact on speed negligible compared to regularization benefits
     - **Main cost**: Increased training time to reach convergence
-- What is batch normalization, and why is it used?
+12. What is batch normalization, and why is it used?
   - Answer:
     - Normalizes layer inputs across a mini-batch
     - **Formula**: BN(x) = γ((x-μ)/σ) + β
@@ -1257,7 +1257,7 @@
     - **During inference**: Uses running statistics from training
     - Standard in modern architectures (ResNet, Inception)
     - **Trade-off**: Adds computation and memory, batch size dependent
-- What are the hyperparameters for batch normalization that can be optimized?
+13. What are the hyperparameters for batch normalization that can be optimized?
   - Answer:
     - **Key hyperparameters**:
       1. **Momentum** (default 0.9-0.99): Controls running mean/variance update rate for inference
@@ -1267,7 +1267,7 @@
     - **Less commonly tuned**: 5. **Position**: Before or after activation (usually before) 6. **Batch size**: Affects normalization statistics (larger is more stable)
     - Most practitioners use default values
     - **Note**: Learnable parameters γ and β are optimized during training, not hyperparameters
-- What is parameter sharing in deep learning?
+14. What is parameter sharing in deep learning?
   - Answer:
     - Using the same weights across different parts of the network
     - **CNNs**:
@@ -1284,7 +1284,7 @@
       4. **Enables variable input sizes**
     - Why CNNs work well for images and RNNs for sequences
     - Without parameter sharing, networks would be impractically large
-- What is representation learning, and why is it useful?
+15. What is representation learning, and why is it useful?
   - Answer:
     - Automatically discovering useful features/representations from raw data
     - Instead of manual feature engineering
@@ -1301,7 +1301,7 @@
       - Word embeddings capture semantic relationships
       - CNN features capture visual patterns
     - Key advantage of deep learning over traditional ML
-- What is a generative model, and how does it differ from a discriminative model?
+16. What is a generative model, and how does it differ from a discriminative model?
   - Answer:
     - **Generative models**:
       - Learn P(X,Y) or P(X|Y)
@@ -1319,7 +1319,7 @@
       - Generative models understand data distribution and can generate samples
       - Discriminative models only learn boundaries, typically perform better for classification
     - **Generative models**: Need more data but more flexible (generation, anomaly detection, semi-supervised learning)
-- Can you explain how a generative model works?
+17. Can you explain how a generative model works?
   - Answer:
     - Generative models learn underlying probability distribution of data P(X) or P(X|Y)
     - **Process**:
@@ -1335,7 +1335,7 @@
       - Anomaly detection
       - Semi-supervised learning
     - Modern generative models (Stable Diffusion, GPT) can create highly realistic images and text by learning complex data distributions
-- What is Latent Space?
+18. What is Latent Space?
   - Answer:
     - Lower-dimensional representation where data is encoded
     - Captures essential features while discarding noise
@@ -1351,7 +1351,7 @@
       3. **Manipulation**: Edit attributes by moving in latent space
       4. **Compression**: Efficient data representation
     - VAEs explicitly structure latent space to be smooth and continuous
-- What are autoencoders? Explain their layers and practical uses.
+19. What are autoencoders? Explain their layers and practical uses.
   - Answer:
     - Neural networks that learn compressed representations by reconstructing input data
     - **Architecture**:
@@ -1371,7 +1371,7 @@
       4. **Feature learning**: Use encoder for downstream tasks
       5. **Data compression**
     - Learn non-linear representations unlike PCA
-- What is a Variational Autoencoder (VAE), and how is it different from a traditional autoencoder?
+20. What is a Variational Autoencoder (VAE), and how is it different from a traditional autoencoder?
   - Answer:
     - VAE is a generative model that learns a probabilistic latent space
     - **Key difference**: Instead of encoding to fixed point, VAE encodes to probability distribution (mean and variance)
@@ -1387,7 +1387,7 @@
       3. **Probabilistic**: Captures uncertainty
     - Traditional autoencoders can't generate well because latent space has gaps
     - VAEs ensure continuous, structured latent space
-- How does VAE impose a probabilistic structure on the latent space, and why is that important?
+21. How does VAE impose a probabilistic structure on the latent space, and why is that important?
   - Answer:
     - VAE uses **KL divergence term** in loss function to regularize latent distribution to match prior (typically N(0,1))
     - **Forces**:
@@ -1401,7 +1401,7 @@
       2. **Interpolation**: Smooth transitions between samples
       3. **Disentanglement**: Independent latent dimensions
     - Why VAEs are generative models while regular autoencoders aren't
-- What is the architecture of a Generative Adversarial Network (GAN)?
+22. What is the architecture of a Generative Adversarial Network (GAN)?
   - Answer:
     - GAN consists of two neural networks competing against each other:
     - **1. Generator (G)**:
@@ -1417,7 +1417,7 @@
       - Discriminator tries to minimize it
       - Training alternates: update D to better distinguish real/fake, then update G to better fool D
     - **At equilibrium**: G produces realistic samples and D can't tell real from fake (outputs 0.5)
-- What are the roles of the generator and discriminator in a GAN?
+23. What are the roles of the generator and discriminator in a GAN?
   - Answer:
     - **Generator's role**:
       - Create fake data that looks real
@@ -1433,7 +1433,7 @@
       - As D gets better at detection, G must improve to fool it
       - Pushes both toward better performance
     - **Eventually**: G learns to generate highly realistic samples
-- What is mode collapse in GANs, and how can it be mitigated?
+24. What is mode collapse in GANs, and how can it be mitigated?
   - Answer:
     - **Mode collapse**: Generator produces limited variety of samples, ignoring parts of data distribution
     - Instead of generating diverse outputs, finds a few samples that fool discriminator
@@ -1448,7 +1448,7 @@
       5. **Feature matching**: Match statistics of real/fake data
       6. **Experience replay**: Show D old generated samples
     - Mode collapse remains a key challenge in GAN training
-- How are GANs used in image synthesis or image-to-image translation tasks?
+25. How are GANs used in image synthesis or image-to-image translation tasks?
   - Answer:
     - **Image synthesis**: GANs generate realistic images from random noise
       - StyleGAN creates photorealistic faces
@@ -1466,7 +1466,7 @@
       - Super-resolution, colorization, medical imaging
     - Discriminator ensures outputs look realistic in target domain
     - Additional losses preserve content/structure
-- Explain Convolutional Neural Networks (CNN).
+26. Explain Convolutional Neural Networks (CNN).
   - Answer:
     - Specialized neural networks for processing grid-like data (images, video, time series)
     - Use convolution operations instead of matrix multiplication
@@ -1484,7 +1484,7 @@
       - Early layers learn simple features (edges)
       - Deeper layers learn complex patterns (objects, faces)
     - CNNs revolutionized computer vision, achieving human-level performance on image tasks
-- Explain filters in CNN.
+27. Explain filters in CNN.
   - Answer:
     - Filters (kernels) are small matrices of learnable weights that slide across input to detect specific features
     - A 3×3 filter has 9 weights learned during training
@@ -1502,7 +1502,7 @@
       - Early layers: Simple features (edges, colors)
       - Deeper layers: Complex features (shapes, objects)
     - Filter visualization shows what patterns each filter learned to detect
-- Explain the stride in CNN.
+28. Explain the stride in CNN.
   - Answer:
     - Number of pixels the filter moves at each step when sliding across input
     - **Stride=1**:
@@ -1521,7 +1521,7 @@
       - Stride=2 for downsampling (alternative to pooling)
     - Strided convolutions can replace pooling layers for dimensionality reduction while learning the downsampling operation
     - **Trade-off**: Computational efficiency vs. feature detail
-- Explain padding in CNN.
+29. Explain padding in CNN.
   - Answer: Padding adds extra pixels (usually zeros) around the input border before applying convolution.
     - **Types**:
       1. **Valid (no padding)** - output smaller than input
@@ -1535,7 +1535,7 @@
     - For same padding with stride=1: padding = (filter_size-1)/2
     - **Example**: 5×5 input, 3×3 filter, padding=1 → 5×5 output
     - Modern architectures use padding to build very deep networks without losing spatial resolution too quickly
-- Explain pooling in CNN.
+30. Explain pooling in CNN.
   - Answer: Pooling downsamples feature maps by aggregating values in local regions, reducing spatial dimensions while retaining important information.
     - **Types**:
       1. **Max pooling** - takes maximum value in each region (most common, preserves strongest activations)
@@ -1549,7 +1549,7 @@
       4. **Larger receptive field** - each neuron sees bigger input region
     - **Drawbacks**: Loses spatial information, not learnable
     - Modern architectures sometimes replace pooling with strided convolutions
-- Explain fully connected layers in CNN.
+31. Explain fully connected layers in CNN.
   - Answer: Fully connected (FC) layers are traditional neural network layers where every neuron connects to every neuron in the previous layer. In CNNs, they typically appear at the end after convolutional and pooling layers.
     - **Role**:
       1. **Flatten** - convert 3D feature maps to 1D vector
@@ -1562,7 +1562,7 @@
       3. **Fixed input size** - requires specific input dimensions
     - **Modern trend**: Replace with global average pooling or fully convolutional networks to reduce parameters and allow variable input sizes
     - FC layers are where most overfitting occurs
-- What is a Recurrent Neural Network (RNN)?
+32. What is a Recurrent Neural Network (RNN)?
   - Answer: RNNs are neural networks designed for sequential data where order matters (text, time series, speech).
     - Unlike feedforward networks, RNNs have loops allowing information to persist
     - At each time step, RNN takes current input and previous hidden state, producing output and new hidden state: h*t = tanh(W_hh × h*{t-1} + W_xh × x_t + b)
@@ -1572,7 +1572,7 @@
     - **Architecture**: Input sequence → RNN cells → Output sequence
     - Can be one-to-many (image captioning), many-to-one (sentiment analysis), or many-to-many (translation)
     - RNNs process sequences of variable length, making them powerful for temporal/sequential patterns
-- What are the limitations of RNNs, and how are they solved?
+33. What are the limitations of RNNs, and how are they solved?
   - Answer:
     - **Limitations**:
       1. **Vanishing gradients** - gradients diminish exponentially through time, preventing learning long-term dependencies
@@ -1588,7 +1588,7 @@
       5. **Attention mechanisms** - directly connect distant positions
       6. **Transformers** - replace RNNs entirely with self-attention, enabling parallelization and better long-range modeling
     - Modern NLP mostly uses Transformers instead of RNNs
-- What are LSTM and GRU? How do they solve long-term dependency issues?
+34. What are LSTM and GRU? How do they solve long-term dependency issues?
   - Answer:
     - **LSTM (Long Short-Term Memory)** uses gating mechanisms to control information flow:
       1. **Forget gate** - decides what to discard from cell state
@@ -1603,7 +1603,7 @@
       - The cell state (LSTM) or hidden state (GRU) can carry information across long sequences without vanishing
       - GRU is faster (fewer parameters), LSTM is more powerful (more control)
       - Both significantly outperform vanilla RNNs on tasks requiring long-term memory
-- What are the main gates in LSTM and their roles?
+35. What are the main gates in LSTM and their roles?
   - Answer: LSTM has three gates controlling information flow:
     1. **Forget Gate** (f*t = σ(W_f × [h*{t-1}, x\*t] + b_f)):
        - Decides what information to discard from cell state
@@ -1615,7 +1615,7 @@
     3. **Output Gate** (o_t = σ(W_o × [h*{t-1}, x_t] + b_o)):
        - Decides what to output based on cell state: h_t = o_t × tanh(C_t)
     - These gates are learned during training, allowing LSTM to adaptively remember or forget information based on the task
-- How to identify exploding gradient issues in your model?
+36. How to identify exploding gradient issues in your model?
   - Answer:
     - **Signs of exploding gradients**:
       1. **Loss becomes NaN or infinity** - most obvious indicator
@@ -1632,7 +1632,7 @@
       5. **Use LSTM/GRU** - for RNNs
       6. **Residual connections** - help gradient flow
     - Gradient clipping is the standard solution: clip gradients if norm exceeds threshold (e.g., 5.0)
-- What is a Transformer architecture, and what makes it different from CNNs and RNNs?
+37. What is a Transformer architecture, and what makes it different from CNNs and RNNs?
   - Answer: Transformers are neural networks based entirely on attention mechanisms, introduced in "Attention is All You Need" (2017).
     - **Architecture**: Encoder-decoder structure with self-attention and feedforward layers
     - **Key differences from RNNs**:
@@ -1647,7 +1647,7 @@
     - **Advantages**: Highly parallelizable, captures long-range dependencies, state-of-the-art performance
     - **Disadvantages**: Quadratic complexity in sequence length, requires more data
     - Transformers dominate NLP and increasingly computer vision (Vision Transformers)
-- What is the Attention mechanism in deep learning, and why is it significant?
+38. What is the Attention mechanism in deep learning, and why is it significant?
   - Answer: Attention allows models to focus on relevant parts of input when producing output, mimicking human attention.
     - Instead of compressing entire input into fixed vector, attention computes weighted sum of all input positions based on relevance
     - **Mechanism**: For each output position, compute attention scores (how much to focus on each input), apply softmax to get weights, compute weighted sum of input values
@@ -1659,7 +1659,7 @@
       4. **Better performance** - state-of-the-art results across tasks
       5. **Parallelization** - no sequential processing needed
     - Attention revolutionized NLP (Transformers, BERT, GPT) and is expanding to vision, speech, and multimodal tasks
-- What is the basic difference between LSTM and Transformers?
+39. What is the basic difference between LSTM and Transformers?
   - Answer:
     - **LSTM**:
       1. **Sequential processing** - processes one token at a time, can't parallelize
@@ -1675,7 +1675,7 @@
       5. **Faster training** - highly parallelizable
     - **Key difference**: LSTM processes sequentially with memory, Transformers process in parallel with attention
     - Transformers are now preferred for most NLP tasks due to better performance and training efficiency, though LSTMs still useful for streaming/online scenarios
-- Why does Diffusion work better than Auto-Regression?
+40. Why does Diffusion work better than Auto-Regression?
   - Answer:
     - **Diffusion models** (like Stable Diffusion, DALL-E 2) gradually denoise random noise into samples
     - **Autoregressive models** (like GPT for images, PixelCNN) generate one token/pixel at a time
@@ -1690,7 +1690,7 @@
       2. **Simpler training** - standard cross-entropy loss
     - For image generation, diffusion models have become dominant due to superior quality and speed
     - For text, autoregressive (GPT) remains standard due to discrete nature of language
-- Explain transfer learning and when to use it.
+41. Explain transfer learning and when to use it.
   - Answer: Transfer learning uses knowledge learned from one task to improve performance on a related task. Instead of training from scratch, start with pre-trained model and fine-tune on your data.
     - **Process**:
       1. **Pre-training** - train on large dataset (ImageNet, Wikipedia)
@@ -1708,7 +1708,7 @@
 
 ### NLP
 
-- What are the advantages of Transformers over traditional sequence-to-sequence models?
+1. What are the advantages of Transformers over traditional sequence-to-sequence models?
   - Answer:
     - **Advantages**:
       1. **Parallelization** - processes entire sequence at once vs. sequential RNN processing, dramatically faster training
@@ -1720,7 +1720,7 @@
       7. **Flexible architecture** - easily adaptable to various tasks
     - **Traditional Seq2Seq limitations**: Sequential processing is slow, fixed-length context vector creates bottleneck, struggles with long sequences, vanishing gradients in RNNs
     - Transformers revolutionized NLP, enabling models like BERT, GPT, T5 that achieve human-level performance on many tasks
-- What are the limitations of Transformers, and how can they be addressed?
+2. What are the limitations of Transformers, and how can they be addressed?
   - Answer:
     - **Limitations**:
       1. **Quadratic complexity** - self-attention is O(n²) in sequence length, expensive for long sequences
@@ -1737,7 +1737,7 @@
       6. **Distillation** - create smaller models (DistilBERT)
       7. **Quantization** - reduce precision for efficiency
     - Modern variants address these issues while maintaining performance
-- What is BERT, and how does it improve language understanding?
+3. What is BERT, and how does it improve language understanding?
   - Answer: BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained language model that learns contextualized word representations by reading text bidirectionally.
     - **Key innovations**:
       1. **Bidirectional context** - unlike GPT (left-to-right), BERT sees both left and right context simultaneously
@@ -1750,7 +1750,7 @@
       3. **State-of-the-art** - achieved best results on 11 NLP tasks at release
     - **Usage**: Add task-specific layer on top, fine-tune
     - BERT revolutionized NLP by showing pre-training + fine-tuning is highly effective
-- How are Transformers trained (pre-training and fine-tuning)?
+4. How are Transformers trained (pre-training and fine-tuning)?
   - Answer:
     - **Pre-training** (unsupervised): Train on massive unlabeled text to learn general language understanding
       - Methods:
@@ -1767,7 +1767,7 @@
     - **Benefits**: Pre-training learns general features (syntax, semantics, world knowledge), fine-tuning specializes for task
     - This two-stage approach achieves better performance with less task-specific data than training from scratch
     - Modern practice: pre-train once, fine-tune for many tasks
-- Explain transfer learning in the context of Transformers.
+5. Explain transfer learning in the context of Transformers.
   - Answer: Transfer learning with Transformers leverages pre-trained models for downstream tasks.
     - **Process**:
       1. **Pre-training** - train Transformer on large corpus (billions of tokens) with self-supervised objectives (MLM, CLM), learning general language patterns
@@ -1783,7 +1783,7 @@
       3. Captures general language knowledge
     - **Examples**: BERT for classification, GPT for generation, T5 for any text-to-text task
     - Transfer learning made NLP accessible, as most practitioners use pre-trained models rather than training from scratch
-- Describe the process of text generation using Transformer-based language models.
+6. Describe the process of text generation using Transformer-based language models.
   - Answer:
     - **Process**:
       1. **Input prompt** - provide starting text
@@ -1801,7 +1801,7 @@
       5. **Temperature** - control randomness (low=conservative, high=creative)
     - **Autoregressive**: Each token depends on all previous tokens
     - Models like GPT-3, ChatGPT use this process to generate coherent, contextual text
-- What are Seq2Seq models?
+7. What are Seq2Seq models?
   - Answer: Sequence-to-Sequence models transform one sequence into another, handling variable-length inputs and outputs.
     - **Architecture**:
       1. **Encoder** - processes input sequence, compresses into fixed-size context vector (thought vector)
@@ -1813,7 +1813,7 @@
     - **Applications**: Machine translation (English→French), text summarization (long→short), dialogue systems (question→answer), speech recognition (audio→text), image captioning (image→text)
     - Modern Seq2Seq uses Transformers instead of RNNs (faster, better performance)
     - The encoder-decoder pattern is fundamental to many NLP tasks
-- Compare N-gram models and deep learning models (trade-offs).
+8. Compare N-gram models and deep learning models (trade-offs).
   - Answer:
     - **N-gram models**: Statistical models predicting next word based on previous n-1 words
       - **Pros**:
@@ -1842,7 +1842,7 @@
         4. Less interpretable
         5. Longer training time
     - **Trade-off**: N-grams for simple, fast, low-resource scenarios. Deep learning for high-performance, complex tasks with sufficient data and compute
-- What is the n-gram model?
+9. What is the n-gram model?
   - Answer: N-gram is a statistical language model that predicts the next word based on the previous n-1 words.
     - **Types**:
       1. **Unigram (n=1)** - each word independent, P(w_i)
@@ -1857,7 +1857,7 @@
       3. No semantic understanding
       4. Storage grows exponentially with n
     - Despite limitations, n-grams were dominant before deep learning and still useful for baselines and simple applications
-- What is TF-IDF, and how does it differ from word embeddings?
+10. What is TF-IDF, and how does it differ from word embeddings?
   - Answer:
     - **TF-IDF** (Term Frequency-Inverse Document Frequency) is a statistical measure of word importance
       - **Formula**: TF-IDF(word, doc) = TF(word, doc) × IDF(word)
@@ -1872,7 +1872,7 @@
       4. **Similarity**: TF-IDF uses term overlap, embeddings use cosine similarity in semantic space
     - **Use TF-IDF**: Simple, interpretable, works with small data
     - **Use embeddings**: Better semantic understanding, deep learning models
-- What is Bag-of-Words?
+11. What is Bag-of-Words?
   - Answer: Bag-of-Words (BoW) represents text as an unordered collection of words, ignoring grammar and word order.
     - **Process**:
       1. Create vocabulary from corpus
@@ -1891,7 +1891,7 @@
       4. No context
     - **Usage**: Text classification, spam detection, sentiment analysis (simple baselines)
     - Modern NLP uses embeddings and Transformers, but BoW remains useful for simple tasks and baselines
-- What is perplexity used for in NLP?
+12. What is perplexity used for in NLP?
   - Answer: Perplexity measures how well a language model predicts text. Lower perplexity = better model.
     - **Formula**: Perplexity = exp(-1/N × Σ log P(w_i|context)), where N is number of words
     - Intuitively, it's the average branching factor - how many words the model is "confused" between
@@ -1906,7 +1906,7 @@
       3. **Hyperparameter tuning** - select best configuration
     - **Limitation**: Only measures prediction, not generation quality or usefulness. A model can have low perplexity but generate nonsensical text
     - Use alongside human evaluation for generation tasks
-- What is stemming vs lemmatization?
+13. What is stemming vs lemmatization?
   - Answer: Both reduce words to base form, but differently.
     - **Stemming**: Crude heuristic process chopping off word endings
       - Rules-based (remove "ing", "ed", "s")
@@ -1924,7 +1924,7 @@
       3. **Output**: Lemmatization produces real words, stemming may not
     - **When to use**: Stemming for search engines, information retrieval (speed matters). Lemmatization for NLP tasks needing accuracy (sentiment analysis, text classification)
     - Modern deep learning often uses neither, working with raw text or subword tokens
-- What is Latent Semantic Indexing (LSI)?
+14. What is Latent Semantic Indexing (LSI)?
   - Answer: LSI (also called Latent Semantic Analysis) is a dimensionality reduction technique for text that discovers latent semantic structure.
     - **Process**:
       1. Create term-document matrix (rows=words, columns=documents, values=TF-IDF)
@@ -1943,7 +1943,7 @@
       3. Linear assumptions
     - Modern alternatives: LDA (topic modeling), word embeddings (Word2Vec), Transformers
     - LSI was important historically but largely superseded by neural methods
-- What is dependency parsing?
+15. What is dependency parsing?
   - Answer: Dependency parsing analyzes grammatical structure by identifying relationships between words. It creates a tree where words are nodes and edges represent syntactic dependencies.
     - **Example**: "I ate pizza" → "ate" is root, "I" is subject (nsubj), "pizza" is object (dobj)
     - **Dependencies**:
@@ -1962,7 +1962,7 @@
       4. **Semantic analysis** - understand sentence meaning
     - **Tools**: spaCy, Stanford Parser
     - Dependency parsing captures syntactic structure more flexibly than constituency parsing, especially for free word-order languages
-- What are some approaches for text summarization?
+16. What are some approaches for text summarization?
   - Answer:
     - **Extractive summarization**: Select important sentences from original text
       - **Methods**:
@@ -1983,7 +1983,7 @@
     - **Hybrid**: Combine both approaches
     - **Evaluation**: ROUGE (overlap metrics), human evaluation
     - Modern systems use pre-trained Transformers (T5, BART) fine-tuned on summarization datasets, achieving near-human performance
-- What are word embeddings?
+17. What are word embeddings?
   - Answer: Word embeddings are dense vector representations of words in continuous space where semantic similarity corresponds to geometric proximity.
     - Each word maps to a fixed-size vector (typically 100-300 dimensions) learned from large text corpora
     - **Key property**: Similar words have similar vectors. "king" and "queen" are close, "king" and "car" are distant
@@ -1999,7 +1999,7 @@
       4. **Arithmetic operations** - vector math captures analogies
     - **Limitation**: One vector per word (no context)
     - Modern: Contextual embeddings (BERT, GPT) where word vectors depend on context
-- What is Word2Vec?
+18. What is Word2Vec?
   - Answer: Word2Vec learns word embeddings by predicting words from context (or vice versa) using shallow neural networks.
     - **Two architectures**:
       1. **CBOW (Continuous Bag of Words)** - predicts target word from context words. Fast, works well for frequent words
@@ -2015,7 +2015,7 @@
       1. One embedding per word (ignores polysemy)
       2. No context (same vector regardless of usage)
     - Pre-trained Word2Vec (Google News) widely used before contextual embeddings
-- What is t-SNE, and how is it used for NLP?
+19. What is t-SNE, and how is it used for NLP?
   - Answer: t-SNE (t-Distributed Stochastic Neighbor Embedding) is a dimensionality reduction technique for visualization, reducing high-dimensional data to 2D/3D while preserving local structure.
     - **How it works**:
       1. Compute pairwise similarities in high-dimensional space
@@ -2038,7 +2038,7 @@
 
 ### Large Language Model
 
-- What is a Large Language Model (LLM), and how does it work?
+1. What is a Large Language Model (LLM), and how does it work?
   - Answer: LLMs are neural networks with billions of parameters trained on massive text corpora to understand and generate human language.
     - **How they work**:
       1. **Architecture** - typically Transformer-based (GPT, BERT, T5)
@@ -2049,7 +2049,7 @@
     - **Examples**: GPT-4 (trillions of parameters), LLaMA, Claude, PaLM
     - They capture grammar, facts, reasoning patterns, and even some common sense from training data
     - Work by learning statistical patterns and representations that encode linguistic and world knowledge
-- What are Transformer Models and how do they work?
+2. What are Transformer Models and how do they work?
   - Answer: Transformers are neural network architectures based on self-attention mechanisms.
     - **Core idea**: Process entire sequence simultaneously, computing relationships between all positions
     - **Components**:
@@ -2062,7 +2062,7 @@
     - **Key innovation**: Attention replaces recurrence, enabling parallelization. Each layer refines representations
     - **Variants**: Encoder-only (BERT), Decoder-only (GPT), Encoder-Decoder (T5)
     - Transformers revolutionized NLP by being more efficient and effective than RNNs/LSTMs
-- What are the key components of a Transformer model?
+3. What are the key components of a Transformer model?
   - Answer:
     1. **Input Embeddings** - convert tokens to dense vectors
     2. **Positional Encoding** - add position information (sine/cosine or learned)
@@ -2074,7 +2074,7 @@
     - **Encoder block**: Self-Attention → Add & Norm → FFN → Add & Norm
     - **Decoder block**: Masked Self-Attention → Add & Norm → Cross-Attention (encoder-decoder) → Add & Norm → FFN → Add & Norm
     - These components stack (6-96+ layers) to build deep models that learn hierarchical representations
-- What is self-attention, and how does it work in Transformers?
+4. What is self-attention, and how does it work in Transformers?
   - Answer: Self-attention computes relationships between all positions in a sequence, allowing each token to attend to all others.
     - **Process**:
       1. **Create Q, K, V** - project input through learned weight matrices to get Query, Key, Value vectors for each token
@@ -2086,7 +2086,7 @@
     - **Intuition**: Each token asks "which other tokens are relevant to me?" and aggregates information from relevant tokens
     - This allows capturing dependencies regardless of distance
     - Unlike RNNs, all positions computed in parallel
-- How does attention help capture long-range dependencies?
+5. How does attention help capture long-range dependencies?
   - Answer: Attention creates direct connections between all positions, regardless of distance.
     - **In RNNs**: Information flows sequentially, so token at position 100 must pass through 99 intermediate steps to reach position 1. Gradients vanish, long-range dependencies are lost
     - **In Transformers**: Every token directly attends to every other token in one step. Position 100 can directly attend to position 1 with no intermediate steps
@@ -2097,7 +2097,7 @@
       4. **Bidirectional context** - can see both past and future (in encoders)
     - **Example**: In "The animal didn't cross the street because it was too tired", attention helps "it" attend to "animal" despite distance
     - This is why Transformers excel at tasks requiring understanding of long contexts
-- What is pre-training vs fine-tuning in LLMs?
+6. What is pre-training vs fine-tuning in LLMs?
   - Answer:
     - **Pre-training**: Train model on massive unlabeled text (billions of tokens) with self-supervised objectives
       - For GPT: predict next token
@@ -2114,7 +2114,7 @@
       4. **Cost effective** - fine-tuning is much cheaper than training from scratch
     - **Modern approach**: Pre-train once (foundation model), fine-tune for many tasks
     - Some large models (GPT-4) use prompting instead of fine-tuning
-- What are some challenges in training LLMs?
+7. What are some challenges in training LLMs?
   - Answer:
     1. **Computational cost** - requires thousands of GPUs, millions of dollars, weeks/months of training
     2. **Data requirements** - need billions of tokens of high-quality text
@@ -2127,7 +2127,7 @@
     9. **Catastrophic forgetting** - fine-tuning can lose pre-trained knowledge
     10. **Alignment** - making models helpful, harmless, honest
     - Solutions include better architectures, training techniques (mixed precision, gradient checkpointing), and careful data curation
-- What is zero-shot learning in the context of LLMs?
+8. What is zero-shot learning in the context of LLMs?
   - Answer: Zero-shot learning is performing a task without any task-specific training examples, using only a natural language description.
     - **Example**: Ask "Translate to French: Hello" without showing any translation examples. The model uses knowledge from pre-training to understand and execute the task
     - **How it works**: LLMs learn general patterns during pre-training that transfer to new tasks. They understand instructions and can apply knowledge flexibly
@@ -2138,7 +2138,7 @@
     - **Emergence**: Zero-shot abilities emerge at scale (GPT-3, GPT-4). Smaller models struggle
     - **Applications**: Classification, translation, summarization, reasoning - all without task-specific training
     - **Limitation**: Performance usually lower than fine-tuned models, but incredibly flexible and requires no training data
-- How do you handle bias and fairness in LLMs?
+9. How do you handle bias and fairness in LLMs?
   - Answer: LLMs inherit biases from training data.
     - **Mitigation strategies**:
       1. **Data curation** - filter toxic content, balance representation across demographics
@@ -2153,7 +2153,7 @@
       10. **Continuous monitoring** - track bias metrics in production
     - **Challenge**: Complete debiasing is impossible; focus on harm reduction
     - Requires ongoing effort and diverse teams
-- What are some real-world applications of LLMs in business and tech?
+10. What are some real-world applications of LLMs in business and tech?
   - Answer:
     1. **Customer service** - chatbots, automated support, FAQ answering
     2. **Content creation** - marketing copy, articles, social media posts
@@ -2169,7 +2169,7 @@
     12. **Sales** - lead qualification, personalized outreach
     - **Impact**: Increased productivity, cost reduction, improved user experience
     - **Caution**: Need human oversight for critical applications
-- How does the Transformer architecture improve LLM performance over RNNs?
+11. How does the Transformer architecture improve LLM performance over RNNs?
   - Answer:
     1. **Parallelization** - processes entire sequence simultaneously vs. sequential RNN processing, enabling much faster training on modern hardware
     2. **Long-range dependencies** - direct attention connections vs. sequential information flow, no vanishing gradients
@@ -2182,7 +2182,7 @@
     - This enabled the LLM revolution (GPT, BERT)
     - RNNs limited to millions of parameters; Transformers scale to trillions
     - The architecture is fundamentally better suited for modern hardware (GPUs/TPUs) and large-scale training
-- Explain the attention mechanism in LLMs.
+12. Explain the attention mechanism in LLMs.
   - Answer: Attention in LLMs allows each token to focus on relevant parts of the input when computing its representation.
     - **Mechanism**:
       1. **Query, Key, Value** - each token has three vectors representing "what I'm looking for", "what I offer", and "what I contain"
@@ -2196,7 +2196,7 @@
       3. **Masked attention** - prevent looking at future tokens (GPT)
     - **Power**: Enables modeling complex dependencies, capturing context, and building rich representations
     - The key innovation that made LLMs possible
-- What are multi-head attention mechanisms? Why use multiple attention heads?
+13. What are multi-head attention mechanisms? Why use multiple attention heads?
   - Answer: Multi-head attention runs multiple attention mechanisms in parallel, each with different learned projections.
     - **Process**:
       1. Project input to h different Q, K, V spaces (typically h=8 or 16)
@@ -2212,7 +2212,7 @@
     - **Example**: One head might focus on subject-verb agreement, another on coreference, another on semantic similarity
     - Visualization shows heads learn interpretable patterns
     - Multiple heads are crucial for Transformer performance
-- Explain the Query(Q), Key(K), and Value(V) in attention.
+14. Explain the Query(Q), Key(K), and Value(V) in attention.
   - Answer: Q, K, V are three different projections of the input, each serving a specific role in attention.
     - **Query (Q)**: "What am I looking for?" - represents the current token's information needs. Used to compute relevance scores with keys
     - **Key (K)**: "What do I offer?" - represents what information each token can provide. Compared with queries to determine relevance
@@ -2224,7 +2224,7 @@
       3. Aggregate: output = weights · V (weighted sum of values)
     - **Why separate**: Allows model to learn what to look for (Q), what to match on (K), and what to retrieve (V) independently
     - This flexibility is key to attention's power
-- Tokenization in Large Language Models (LLMs).
+15. Tokenization in Large Language Models (LLMs).
   - Answer: Tokenization splits text into smaller units (tokens) that the model processes.
     - **Why needed**: Models work with fixed vocabularies; can't handle infinite words
     - **Approaches**:
@@ -2239,7 +2239,7 @@
       4. **Special tokens** - [CLS], [SEP], [PAD], [MASK]
     - **Impact**: Tokenization affects model performance, efficiency, and behavior. Poor tokenization can hurt non-English languages
     - Modern LLMs use sophisticated subword tokenization (BPE, WordPiece, SentencePiece) with vocabularies of 30K-100K tokens
-- What is subword tokenization?
+16. What is subword tokenization?
   - Answer: Subword tokenization splits words into smaller meaningful units, balancing vocabulary size and sequence length.
     - **Benefits**:
       1. **Handles rare words** - "unhappiness" → "un", "happiness" (seen during training)
@@ -2255,7 +2255,7 @@
     - **Example**: "tokenization" might split to ["token", "ization"] or ["token", "##ization"]
     - **Trade-off**: More subwords = longer sequences (slower) but better rare word handling
     - Most modern LLMs use subword tokenization as the standard approach
-- What is BPE (Byte Pair Encoding) in LLMs?
+17. What is BPE (Byte Pair Encoding) in LLMs?
   - Answer: BPE is a subword tokenization algorithm that iteratively merges the most frequent character pairs.
     - **Training process**:
       1. Start with character vocabulary
@@ -2272,7 +2272,7 @@
     - **Used by**: GPT-2, GPT-3, RoBERTa
     - **Variant**: Byte-level BPE (GPT-2) operates on bytes, handling any Unicode character
     - BPE is one of the most popular tokenization methods for LLMs
-- What is positional embedding in LLMs?
+18. What is positional embedding in LLMs?
   - Answer: Positional embeddings add position information to token embeddings, since Transformers have no inherent notion of order (unlike RNNs).
     - **Why needed**: Self-attention is permutation-invariant - "dog bites man" and "man bites dog" would be identical without position info
     - **Types**:
@@ -2283,7 +2283,7 @@
     - **Usage**: Add positional embedding to token embedding before first layer
     - This allows model to use position information throughout processing
     - Critical for Transformer performance
-- What is temperature in the context of LLMs?
+19. What is temperature in the context of LLMs?
   - Answer: Temperature is a hyperparameter controlling randomness in text generation by scaling logits before softmax.
     - **Formula**: P(token) = softmax(logits / temperature)
     - **Effects**:
@@ -2295,7 +2295,7 @@
     - **Use cases**: Low temperature for factual tasks (translation, summarization), high temperature for creative tasks (story writing, brainstorming)
     - **Trade-off**: Creativity vs. coherence
     - Temperature is a simple but powerful knob for controlling generation behavior
-- What is causal masking?
+20. What is causal masking?
   - Answer: Causal masking (or causal attention) prevents tokens from attending to future positions, ensuring autoregressive property.
     - **Why needed**: In language modeling, when predicting token at position i, model should only see positions 1 to i-1, not future tokens. Otherwise, it would "cheat" by seeing the answer
     - **Implementation**: Apply mask to attention scores before softmax. Set future positions to -∞, so softmax gives them 0 weight
@@ -2304,7 +2304,7 @@
     - **Used in**: GPT and all decoder-only models for text generation
     - **Contrast**: BERT uses bidirectional attention (no masking) since it's not autoregressive
     - Causal masking is fundamental to autoregressive language modeling
-- What are skip connections?
+21. What are skip connections?
   - Answer: Skip connections (residual connections) add the input of a layer directly to its output: output = Layer(input) + input.
     - **Why important**:
       1. **Gradient flow** - provide direct paths for gradients to flow backward, preventing vanishing gradients in deep networks
@@ -2315,7 +2315,7 @@
     - **Impact**: Critical for training deep Transformers. Without skip connections, deep models fail to train
     - **Origin**: Introduced in ResNet for computer vision, now standard in all deep architectures
     - Enable the depth that makes modern LLMs powerful
-- What is normalization?
+22. What is normalization?
   - Answer: Normalization standardizes layer inputs/outputs to have stable distributions, improving training.
     - **Layer Normalization** (used in Transformers): Normalize across features for each sample: output = γ(x - μ)/σ + β, where μ, σ computed per sample across feature dimension. Learnable parameters γ (scale), β (shift)
     - **Why needed**:
@@ -2328,7 +2328,7 @@
       1. **Batch Normalization** - normalize across batch (CNNs)
       2. **RMSNorm** - simpler variant without mean centering (LLaMA)
     - Normalization is essential for training deep networks effectively
-- What is dropout, and how is it applied in LLMs?
+23. What is dropout, and how is it applied in LLMs?
   - Answer: Dropout randomly sets activations to zero during training with probability p (typically 0.1-0.3 in Transformers).
     - **In LLMs**: Applied to:
       1. **Attention weights** - after softmax, before multiplying with values
@@ -2343,7 +2343,7 @@
     - **Trend**: Modern large LLMs use less dropout (0.0-0.1) than earlier models, as scale provides implicit regularization. Some models (GPT-3) use minimal dropout
     - **Trade-off**: Too much dropout slows convergence and hurts performance; too little risks overfitting
     - Dropout is less critical for very large models trained on massive data
-- Why does Attention use Softmax?
+24. Why does Attention use Softmax?
   - Answer: Softmax converts attention scores to a probability distribution for several reasons:
     1. **Normalization** - ensures weights sum to 1, making output a weighted average
     2. **Differentiability** - smooth, differentiable function enables gradient-based learning
@@ -2358,7 +2358,7 @@
       3. **Linear attention** - removes softmax for efficiency
     - Softmax is standard because it balances interpretability, performance, and training stability
     - The exponential creates sharp focus on relevant tokens while maintaining differentiability
-- What does a vector database (Vector DB) store for LLM usage?
+25. What does a vector database (Vector DB) store for LLM usage?
   - Answer: Vector databases store high-dimensional embeddings (vectors) of text, images, or other data, enabling semantic search.
     - **For LLMs**: Store embeddings of:
       1. **Documents** - knowledge base articles, documentation
@@ -2373,7 +2373,7 @@
     - **Use in RAG**: Retrieve relevant context to augment LLM prompts, providing up-to-date or domain-specific information
     - **Examples**: Pinecone, Weaviate, Milvus, Chroma, FAISS
     - **Benefits**: Fast semantic search (not just keyword matching), scalable to billions of vectors, enables LLMs to access external knowledge
-- How do you improve inference speed in production LLM deployments?
+26. How do you improve inference speed in production LLM deployments?
   - Answer:
     1. **Model optimization**: Quantization (INT8/INT4), pruning, distillation to smaller models
     2. **Batching**: Process multiple requests together (increases throughput)
@@ -2389,7 +2389,7 @@
     - **Trade-offs**: Speed vs. quality, cost vs. latency
     - Combine multiple techniques for best results
     - Can achieve 2-10x speedup with careful optimization
-- Explain Prompting, Retrieval-Augmented Generation (RAG), and Fine-Tuning.
+27. Explain Prompting, Retrieval-Augmented Generation (RAG), and Fine-Tuning.
   - Answer: Three approaches to adapt LLMs to tasks:
     - **Prompting**: Provide instructions and examples in the input text. No training needed
       - Example: "Translate to French: Hello → Bonjour. Translate to French: Goodbye →"
@@ -2407,7 +2407,7 @@
 
 ### Model Evaluation
 
-- What are precision, recall, F1 score, and accuracy?
+1. What are precision, recall, F1 score, and accuracy?
   - Answer:
     - **Accuracy** = (TP+TN)/(TP+TN+FP+FN) - overall correctness, misleading with imbalanced classes
     - **Precision** = TP/(TP+FP) - of predicted positives, how many are correct
@@ -2420,7 +2420,7 @@
       - Use with imbalanced classes or when both metrics matter
     - **Trade-off**: Increasing precision often decreases recall and vice versa
     - Choose metric based on business cost of errors
-- What is the confusion matrix, and how do you interpret it?
+2. What is the confusion matrix, and how do you interpret it?
   - Answer: Confusion matrix shows actual vs. predicted classes in a table. For binary classification: rows are actual (Positive/Negative), columns are predicted (Positive/Negative).
     - **Cells**:
       1. **True Positive (TP)** - correctly predicted positive
@@ -2432,7 +2432,7 @@
     - **Metrics derived**: Accuracy, Precision, Recall, F1, Specificity
     - **Multi-class**: N×N matrix showing all class pairs
     - Confusion matrix is essential for understanding model behavior beyond single accuracy number
-- What are common evaluation metrics for Classification?
+3. What are common evaluation metrics for Classification?
   - Answer:
     1. **Accuracy** - overall correctness, simple but misleading with imbalance
     2. **Precision** - correctness of positive predictions
@@ -2447,7 +2447,7 @@
     - **Multi-class**: Macro/Micro/Weighted averaging of metrics
     - **Choose based on**: Class balance, cost of errors, business requirements
     - Don't rely on single metric
-- When would you use accuracy vs other metrics?
+4. When would you use accuracy vs other metrics?
   - Answer:
     - **Use Accuracy when**:
       1. Classes are balanced (roughly equal samples)
@@ -2464,7 +2464,7 @@
       2. **Costly errors** - Precision (minimize FP) or Recall (minimize FN)
       3. **Probability quality** - Log Loss, Brier Score
     - Accuracy is intuitive but often misleading. Always check class distribution first
-- When would you use log loss vs accuracy?
+5. When would you use log loss vs accuracy?
   - Answer:
     - **Log Loss (Cross-Entropy)**: Measures quality of predicted probabilities, not just binary predictions. Penalizes confident wrong predictions heavily
       - **Use when**:
@@ -2480,7 +2480,7 @@
     - **Key difference**: Log loss considers confidence. Predicting 51% vs. 99% for correct class gives same accuracy but very different log loss
     - **Example**: Medical diagnosis needs calibrated probabilities (log loss), spam filter just needs binary decision (accuracy)
     - Use log loss during training, accuracy for reporting
-- What metrics would you use for a multi-class classification problem?
+6. What metrics would you use for a multi-class classification problem?
   - Answer:
     1. **Accuracy** - if balanced classes
     2. **Macro-averaged F1** - average F1 across classes (treats all classes equally), good for imbalanced data
@@ -2494,7 +2494,7 @@
     - **Choose based on**: Class balance (macro for imbalance), business needs (per-class metrics if some classes more important)
     - Report multiple metrics for complete picture
     - Confusion matrix is essential for understanding errors
-- How do you handle class imbalance in classification metrics?
+7. How do you handle class imbalance in classification metrics?
   - Answer: Standard metrics (accuracy) are misleading with imbalance.
     - **Solutions**:
       1. **Use appropriate metrics** - F1, Precision-Recall AUC, Matthews Correlation (not accuracy or ROC-AUC)
@@ -2508,7 +2508,7 @@
       2. **Resampling** - oversample minority or undersample majority
       3. **Threshold tuning** - adjust decision threshold for desired precision/recall trade-off
     - **Example**: 99% negative class - 99% accuracy means nothing. Use F1 or PR-AUC to see if model actually learned minority class
-- What is the ROC curve? What is AUC?
+8. What is the ROC curve? What is AUC?
   - Answer:
     - **ROC (Receiver Operating Characteristic) curve** plots True Positive Rate (TPR=Recall) vs. False Positive Rate (FPR=1-Specificity) at various classification thresholds
     - Shows trade-off between sensitivity and specificity
@@ -2524,7 +2524,7 @@
     - **Advantages**: Threshold-independent, good for comparing models
     - **Limitations**: Optimistic with imbalanced data (use Precision-Recall curve instead), doesn't show calibration
     - **Use**: Model comparison, threshold selection, balanced datasets
-- How do you handle imbalanced datasets?
+9. How do you handle imbalanced datasets?
   - Answer:
     - **Data-level**:
       1. **Oversampling** - duplicate minority class (simple but overfitting risk)
@@ -2543,7 +2543,7 @@
     - **Collect more data**: For minority class if possible
     - **Choose based on**: Degree of imbalance, data availability, computational resources
     - Often combine multiple approaches
-- What are common evaluation metrics for Regression?
+10. What are common evaluation metrics for Regression?
   - Answer:
     1. **MAE (Mean Absolute Error)** = (1/n)Σ|y_true - y_pred| - average absolute error, same units as target, robust to outliers
     2. **MSE (Mean Squared Error)** = (1/n)Σ(y_true - y_pred)² - penalizes large errors more, sensitive to outliers
@@ -2554,7 +2554,7 @@
     7. **Median Absolute Error** - robust to outliers
     - **Choose based on**: Outlier sensitivity (MAE vs MSE), interpretability (RMSE, R²), scale (MAPE)
     - Report multiple metrics for complete picture
-- What's the difference between MAE, MSE, and RMSE?
+11. What's the difference between MAE, MSE, and RMSE?
   - Answer:
     - **MAE (Mean Absolute Error)**: Average of absolute errors
       - **Pros**:
@@ -2579,7 +2579,7 @@
       - **Cons**: Still sensitive to outliers
     - **When to use**: MAE when outliers are errors to ignore, MSE/RMSE when large errors are particularly bad
     - MSE for optimization (smooth gradients), MAE/RMSE for reporting (interpretable)
-- How do you choose the right evaluation metric for a given problem?
+12. How do you choose the right evaluation metric for a given problem?
   - Answer: Consider:
     1. **Problem type** - classification (accuracy, F1, AUC), regression (MAE, RMSE, R²), ranking (NDCG, MAP)
     2. **Class balance** - imbalanced → F1, PR-AUC (not accuracy)
@@ -2592,7 +2592,7 @@
     9. **Multi-objective** - track multiple metrics
     - **Process**: Start with standard metric, check if it aligns with business goals, validate with domain experts, monitor multiple metrics
     - Don't optimize for metric that doesn't reflect real-world performance
-- How do you compare the performance of different models?
+13. How do you compare the performance of different models?
   - Answer:
     1. **Same test set** - ensure fair comparison on identical data
     2. **Multiple metrics** - don't rely on single number (accuracy, F1, AUC, etc.)
@@ -2606,7 +2606,7 @@
     10. **Interpretability** - simpler model may be preferred if performance is similar
     - **Report**: Mean and standard deviation across runs, confidence intervals, statistical significance
     - Consider trade-offs: accuracy vs. speed, performance vs. interpretability
-- Explain cross-validation and its importance.
+14. Explain cross-validation and its importance.
   - Answer: Cross-validation assesses model generalization by splitting data into multiple folds.
     - **K-Fold CV**:
       1. Split data into K equal parts
@@ -2623,7 +2623,7 @@
     - **Variants**: Stratified (preserves class distribution), Leave-One-Out (K=n), Time-series split (respects temporal order)
     - **Cost**: K times more computation
     - **Best practice**: Use cross-validation for model selection, final evaluation on held-out test set
-- What is Hyperparameter Tuning?
+15. What is Hyperparameter Tuning?
   - Answer: Hyperparameter tuning finds optimal hyperparameters (learning rate, regularization, architecture choices) that aren't learned during training.
     - **Methods**:
       1. **Manual** - expert intuition, trial and error
@@ -2641,7 +2641,7 @@
       6. Evaluate on test set
     - **Tools**: Optuna, Ray Tune, Hyperopt, Weights & Biases
     - **Tips**: Start with important hyperparameters (learning rate), use coarse-to-fine search, monitor for overfitting to validation set
-- How do you evaluate unsupervised learning models?
+16. How do you evaluate unsupervised learning models?
   - Answer: No ground truth labels makes evaluation challenging.
     - **Intrinsic metrics** (internal structure):
       1. **Silhouette Score** - how similar points are to their cluster vs. other clusters (-1 to 1, higher better)
@@ -2656,7 +2656,7 @@
       2. **Domain expert review** - do clusters make sense?
       3. **Downstream task** - use learned representations for supervised task
     - **Best**: Combine multiple approaches, validate with domain knowledge
-- How do you evaluate a clustering algorithm?
+17. How do you evaluate a clustering algorithm?
   - Answer:
     - **Internal metrics** (no labels needed):
       1. **Silhouette Score** - measures cluster cohesion and separation, range [-1,1], higher is better
@@ -2673,7 +2673,7 @@
       3. **Domain validation** - do clusters make business sense?
       4. **Stability** - consistent across runs?
     - **Best practice**: Use multiple metrics, validate with domain experts
-- What metrics would you use for a recommendation system?
+18. What metrics would you use for a recommendation system?
   - Answer:
     - **Ranking metrics**:
       1. **Precision@K** - of top K recommendations, how many are relevant
@@ -2694,7 +2694,7 @@
       7. **Novelty** - recommending new items
     - **A/B testing**: Compare systems in production
     - Use multiple metrics: accuracy (NDCG), business impact (revenue), user experience (diversity)
-- What is A/B testing in the context of ML?
+19. What is A/B testing in the context of ML?
   - Answer: A/B testing compares two model versions in production by randomly assigning users to each variant and measuring real-world performance.
     - **Process**:
       1. **Split traffic** - randomly assign users to A (control) or B (treatment), typically 50/50 or 90/10
@@ -2713,91 +2713,91 @@
 
 ### System Design and MLOps
 
-- Design a Machine Learning System for YouTube Video Recommendation.
+1. Design a Machine Learning System for YouTube Video Recommendation.
   - Answer: **Components**: (1) **Candidate Generation** - retrieve hundreds of videos from billions using collaborative filtering, user history, trending videos, (2) **Ranking** - score candidates using deep neural network with features (user watch history, video metadata, context), (3) **Re-ranking** - apply business rules, diversity, freshness. **Features**: User demographics, watch/search history, time of day, device, video features (title, tags, engagement metrics). **Model**: Two-tower neural network or Transformer for candidate generation, deep ranking model with wide & deep architecture. **Training**: Implicit feedback (watch time, clicks), handle position bias. **Serving**: Real-time inference (<100ms), caching popular predictions. **Challenges**: Cold start (new users/videos), scalability (billions of videos), freshness (trending content), filter bubbles. **Metrics**: Watch time, CTR, user satisfaction surveys.
-- Design a Machine Learning System for YouTube Video Search.
+2. Design a Machine Learning System for YouTube Video Search.
   - Answer: **Components**: (1) **Query Understanding** - spell correction, query expansion, intent classification, (2) **Retrieval** - fetch relevant videos using inverted index, semantic search (embeddings), (3) **Ranking** - score videos by relevance using learning-to-rank model, (4) **Blending** - combine multiple ranking signals. **Features**: Query-video text match (title, description, tags), video quality (views, likes, watch time), user personalization (history, preferences), recency. **Model**: BERT for query understanding, two-tower model for semantic matching, LambdaMART or neural ranking for final scoring. **Training**: Click data, dwell time, explicit relevance labels from human raters. **Serving**: Sub-second latency, distributed search infrastructure. **Challenges**: Query ambiguity, long-tail queries, multilingual support, spam/low-quality content. **Metrics**: NDCG, MRR, click-through rate, user satisfaction.
-- Design a Machine Learning System for Personalized Content Feed.
+3. Design a Machine Learning System for Personalized Content Feed.
   - Answer: **Components**: (1) **Content Ingestion** - collect posts from connections, pages, groups, (2) **Candidate Generation** - select thousands of posts from millions using heuristics and lightweight models, (3) **Ranking** - score each post by predicted engagement, (4) **Diversity** - ensure variety in content types, sources. **Features**: User features (demographics, interests, past interactions), content features (type, topic, creator, engagement), context (time, device), social graph (connection strength). **Model**: Deep neural network predicting multiple objectives (like, comment, share, time spent), weighted by importance. **Training**: Multi-task learning on user interactions, handle delayed feedback. **Serving**: Real-time scoring, pre-compute for some users. **Challenges**: Filter bubbles, engagement vs. well-being, misinformation, scalability. **Metrics**: Time spent, engagement rate, user surveys, long-term retention.
-- Design a Machine Learning System for Harmful Content Detection.
+4. Design a Machine Learning System for Harmful Content Detection.
   - Answer: **Components**: (1) **Content Analysis** - text, image, video, audio analysis, (2) **Classification** - detect hate speech, violence, nudity, misinformation, (3) **Severity Scoring** - prioritize review queue, (4) **Human Review** - escalate borderline cases. **Features**: Text (keywords, context, toxicity scores), images (object detection, OCR), video (frames, audio transcription), user history (repeat offender), virality. **Models**: BERT/RoBERTa for text, CNN/Vision Transformer for images, multimodal models for combined analysis. Ensemble multiple models. **Training**: Labeled data from human moderators, active learning for edge cases, handle class imbalance. **Serving**: Real-time for high-risk content, batch for lower priority. **Challenges**: Context understanding, evolving tactics, multilingual, false positives (censorship concerns). **Metrics**: Precision/recall, time to detection, human review load, user appeals. **Ethics**: Transparency, appeal process, moderator well-being.
-- Design a Machine Learning System for Similar Listings on Airbnb.
+5. Design a Machine Learning System for Similar Listings on Airbnb.
   - Answer: **Components**: (1) **Embedding Generation** - create vector representations of listings, (2) **Similarity Search** - find nearest neighbors in embedding space, (3) **Ranking** - re-rank by additional signals, (4) **Filtering** - apply business rules (availability, price range). **Features**: Listing attributes (location, price, amenities, type), images (visual similarity), text descriptions, user preferences, booking patterns. **Model**: Two-tower model or Siamese network learning listing embeddings, trained on co-bookings (users who viewed/booked A also liked B). **Training**: Implicit feedback (clicks, bookings), triplet loss or contrastive learning. **Serving**: Pre-compute embeddings, use ANN (Approximate Nearest Neighbors) like FAISS for fast retrieval. **Challenges**: Cold start (new listings), diversity vs. similarity, seasonal variations, cross-market recommendations. **Metrics**: CTR on similar listings, booking conversion, user engagement. **A/B testing**: Measure impact on bookings and revenue.
-- Design a Machine Learning System for Replacement Product Recommendation.
+6. Design a Machine Learning System for Replacement Product Recommendation.
   - Answer: **Goal**: Recommend products when current one is out of stock or discontinued. **Components**: (1) **Product Similarity** - find functionally similar products, (2) **Attribute Matching** - match key features (size, color, brand, price), (3) **Ranking** - score by relevance and availability, (4) **Explanation** - show why recommended. **Features**: Product attributes (category, specifications, price), images (visual similarity), text descriptions, purchase patterns (co-purchases, substitutions), user preferences. **Model**: Product embeddings learned from co-purchase data, attribute-based similarity, hybrid approach combining both. **Training**: Historical substitution data (what users bought when first choice unavailable), explicit feedback. **Serving**: Real-time when product unavailable, pre-compute top substitutes. **Challenges**: Balancing similarity vs. availability, price sensitivity, brand loyalty, explaining differences. **Metrics**: Acceptance rate, conversion rate, customer satisfaction, return rate. **Business impact**: Reduce lost sales, improve customer experience.
-- Design a Machine Learning System for Event Recommendation.
+7. Design a Machine Learning System for Event Recommendation.
   - Answer: **Components**: (1) **User Profiling** - interests, past events, social connections, (2) **Event Understanding** - categorize, extract features, (3) **Candidate Generation** - retrieve relevant events, (4) **Ranking** - personalized scoring, (5) **Diversity** - mix event types, dates, locations. **Features**: User (demographics, interests, location, past attendance, social graph), event (category, time, location, popularity, organizer), context (season, day of week). **Model**: Matrix factorization or neural collaborative filtering for candidate generation, gradient boosting or deep network for ranking. **Training**: Implicit feedback (clicks, RSVPs, attendance), handle sparse data. **Serving**: Daily batch updates, real-time for trending events. **Challenges**: Cold start (new users/events), temporal relevance (upcoming events), location constraints, social influence. **Metrics**: RSVP rate, actual attendance, user engagement, event discovery. **Features**: Incorporate social signals (friends attending), trending events, personalized timing.
-- Design a Machine Learning System for Multimodal Search.
+8. Design a Machine Learning System for Multimodal Search.
   - Answer: **Goal**: Search across text, images, video, audio using any input modality. **Components**: (1) **Multimodal Encoding** - embed different modalities into shared space, (2) **Cross-modal Retrieval** - find relevant items regardless of modality, (3) **Ranking** - score by relevance, (4) **Result Presentation** - diverse modalities. **Architecture**: CLIP-like model with separate encoders for each modality, contrastive learning to align embeddings. Text encoder (BERT/T5), image encoder (Vision Transformer), video encoder (temporal CNN), audio encoder (wav2vec). **Training**: Paired data (image-caption, video-transcript), contrastive loss to bring matching pairs close. **Features**: Cross-modal attention, late fusion of modality-specific scores. **Serving**: Pre-compute embeddings, vector search for retrieval, neural re-ranker. **Challenges**: Modality imbalance, semantic gap between modalities, computational cost, evaluation. **Metrics**: Cross-modal retrieval accuracy, user satisfaction, task completion rate. **Applications**: Search images with text, find videos by audio, visual question answering.
-- Design a Machine Learning System for Ad Click Prediction.
+9. Design a Machine Learning System for Ad Click Prediction.
   - Answer: **Goal**: Predict probability user clicks on ad (CTR prediction). **Components**: (1) **Feature Engineering** - user, ad, context features, (2) **Model Training** - learn click probability, (3) **Serving** - real-time prediction for ad auction, (4) **Calibration** - ensure probabilities are accurate. **Features**: User (demographics, interests, history), ad (creative, landing page, advertiser), context (time, device, placement), historical CTR. **Model**: Logistic regression with feature crosses (baseline), deep learning (Wide & Deep, DeepFM, DCN) for automatic feature interactions. **Training**: Billions of impressions, handle extreme class imbalance (CTR ~0.1-1%), online learning for freshness. **Serving**: <10ms latency, distributed serving, caching. **Challenges**: Data sparsity, cold start (new ads/users), delayed feedback, position bias, ad fatigue. **Metrics**: AUC, log loss, calibration, revenue impact. **Business**: CTR × bid determines ad ranking, accurate prediction maximizes revenue and user experience.
-- Design a Machine Learning System to Estimate Delivery Time.
+10. Design a Machine Learning System to Estimate Delivery Time.
   - Answer: **Goal**: Predict when order will be delivered. **Components**: (1) **Feature Engineering** - order, restaurant, driver, traffic data, (2) **Time Estimation** - predict preparation + delivery time, (3) **Real-time Updates** - adjust as order progresses, (4) **Uncertainty Quantification** - provide confidence intervals. **Features**: Restaurant (historical prep time, current load, menu complexity), driver (location, speed, experience), order (items, size), external (weather, traffic, time of day, day of week, holidays). **Model**: Gradient boosting (XGBoost, LightGBM) or neural network for regression, separate models for prep and delivery, or end-to-end. **Training**: Historical order data with actual times, handle outliers. **Serving**: Real-time prediction at order placement, continuous updates during fulfillment. **Challenges**: Rare events (accidents, restaurant delays), cascading delays, balancing optimism vs. realism. **Metrics**: MAE, RMSE, % within X minutes, user satisfaction. **Business impact**: Set customer expectations, optimize driver assignment, reduce support tickets.
-- Design a Machine Learning System for Image Search.
+11. Design a Machine Learning System for Image Search.
   - Answer: **Components**: (1) **Image Encoding** - extract visual features, (2) **Text Encoding** - process queries, (3) **Retrieval** - find similar images, (4) **Ranking** - score by relevance, (5) **Filtering** - apply constraints. **Architecture**: Vision Transformer or ResNet for image encoding, BERT for text queries, CLIP for joint embedding space. **Features**: Visual features (objects, colors, composition), metadata (tags, captions, EXIF), user context (history, preferences). **Training**: Image-text pairs, contrastive learning (CLIP), fine-tune on domain data. **Retrieval**: Vector database (FAISS, Milvus) for ANN search, inverted index for metadata. **Serving**: Pre-compute image embeddings, real-time query encoding, sub-second retrieval. **Challenges**: Semantic gap (visual vs. textual concepts), ambiguous queries, computational cost, copyright/safety. **Metrics**: Precision@K, user satisfaction, click-through rate. **Features**: Reverse image search, visual similarity, multi-modal queries (text + image).
-- Design a Machine Learning System for Friends Recommendation.
+12. Design a Machine Learning System for Friends Recommendation.
   - Answer: **Goal**: Suggest people users may know. **Components**: (1) **Candidate Generation** - find potential connections, (2) **Feature Engineering** - relationship signals, (3) **Ranking** - score by connection likelihood, (4) **Filtering** - privacy, already connected. **Candidates**: Mutual friends, same school/workplace, contact imports, similar interests, geographic proximity, interaction history. **Features**: Graph features (mutual friends count, network distance), profile similarity (demographics, interests), interaction signals (profile views, message history), context (recent activity). **Model**: Graph neural network (GNN) for network structure, gradient boosting for ranking, or hybrid. **Training**: Positive examples (accepted requests), negative examples (ignored/rejected), handle class imbalance. **Serving**: Daily batch computation, real-time for new users. **Challenges**: Cold start, privacy concerns, avoiding spam, diversity (not just similar people). **Metrics**: Acceptance rate, reciprocal connections, user engagement, network growth. **Ethics**: Avoid revealing sensitive connections, respect privacy settings.
-- Design a Machine Learning Product Recommendation System for an e-commerce platform.
+13. Design a Machine Learning Product Recommendation System for an e-commerce platform.
   - Answer: **Components**: (1) **Candidate Generation** - retrieve relevant products (collaborative filtering, content-based, trending), (2) **Ranking** - personalized scoring, (3) **Re-ranking** - diversity, business rules, (4) **Explanation** - why recommended. **Features**: User (purchase history, browsing, demographics, preferences), product (category, price, attributes, popularity), context (season, device, time). **Models**: Matrix factorization or neural collaborative filtering for candidates, gradient boosting or deep network for ranking, multi-task learning (click, purchase, return). **Training**: Implicit feedback (views, clicks, purchases), handle sparse data, cold start. **Serving**: Real-time personalization, pre-compute for batch users, A/B testing. **Strategies**: Personalized homepage, similar items, frequently bought together, trending, recently viewed. **Challenges**: Cold start (new users/products), scalability, diversity vs. relevance, seasonal patterns. **Metrics**: CTR, conversion rate, revenue, average order value, user engagement. **Business**: Balance user experience with business goals (margins, inventory).
-- How would you build a system to detect fraudulent transactions?
+14. How would you build a system to detect fraudulent transactions?
   - Answer: **Components**: (1) **Feature Engineering** - transaction, user, merchant features, (2) **Real-time Scoring** - fraud probability, (3) **Rule Engine** - hard rules for obvious fraud, (4) **Review Queue** - human investigation, (5) **Feedback Loop** - learn from investigations. **Features**: Transaction (amount, location, time, merchant category), user (history, velocity, device), behavioral (typing patterns, mouse movements), network (IP, device fingerprint), historical patterns. **Model**: Gradient boosting (XGBoost) or neural network, handle extreme imbalance (fraud <1%), ensemble multiple models. **Training**: Labeled data from investigations, semi-supervised learning, synthetic fraud generation. **Serving**: Real-time (<100ms), high availability, fallback to rules. **Challenges**: Evolving fraud patterns, false positives (block legitimate transactions), adversarial attacks, cold start. **Metrics**: Precision/recall, false positive rate, fraud caught, revenue saved. **Monitoring**: Drift detection, performance by fraud type. **Response**: Block, challenge (2FA), manual review based on risk score.
-- Multimodal Fusion Techniques in Machine Learning: Early Fusion vs Late Fusion
+15. Multimodal Fusion Techniques in Machine Learning: Early Fusion vs Late Fusion
   - Answer: **Early Fusion**: Combine raw features from different modalities before model processing. Concatenate or merge inputs (image + text) → single model → prediction. **Pros**: Model learns joint representations, captures cross-modal interactions. **Cons**: Requires aligned data, computationally expensive, one modality can dominate. **Late Fusion**: Process each modality separately with specialized models, combine predictions at end. Image model → score1, Text model → score2 → weighted average → final prediction. **Pros**: Modality-specific architectures, handles missing modalities, easier to train. **Cons**: Misses cross-modal interactions, requires tuning fusion weights. **Hybrid (Intermediate Fusion)**: Combine at intermediate layers, balance between early and late. **Examples**: Early - CLIP joint embedding, Late - ensemble of image and text classifiers. **Choose based on**: Data alignment, computational resources, importance of cross-modal interactions. Modern approaches often use attention-based fusion for flexibility.
-- How would you approach a time series forecasting problem?
+16. How would you approach a time series forecasting problem?
   - Answer: **Steps**: (1) **Understand data** - trend, seasonality, stationarity, (2) **Preprocessing** - handle missing values, outliers, normalization, (3) **Feature engineering** - lags, rolling statistics, time features (day, month), external variables, (4) **Model selection** - based on data characteristics, (5) **Validation** - time-based split (no shuffling), (6) **Evaluation** - MAE, RMSE, MAPE. **Models**: (1) **Statistical** - ARIMA, SARIMA, Exponential Smoothing (simple, interpretable), (2) **ML** - XGBoost, Random Forest with lag features, (3) **Deep Learning** - LSTM, GRU, Transformer (complex patterns, multivariate), (4) **Prophet** - Facebook's tool (handles seasonality, holidays). **Considerations**: Forecast horizon (short vs. long-term), univariate vs. multivariate, computational constraints. **Challenges**: Concept drift, rare events, multiple seasonalities. **Production**: Retrain regularly, monitor performance, handle missing data gracefully.
-- How would you build a spam detection system?
+17. How would you build a spam detection system?
   - Answer: **Components**: (1) **Feature Extraction** - text, metadata, sender features, (2) **Classification** - spam vs. ham, (3) **Confidence Scoring** - spam probability, (4) **Feedback Loop** - learn from user actions. **Features**: Text (keywords, TF-IDF, n-grams, length), sender (reputation, domain, history), structure (HTML, links, attachments), behavioral (sending patterns, volume). **Models**: (1) **Naive Bayes** - fast, interpretable baseline, (2) **Logistic Regression** - with feature engineering, (3) **Gradient Boosting** - XGBoost for better performance, (4) **Deep Learning** - BERT for text understanding. **Training**: Labeled spam/ham emails, handle imbalance, active learning for edge cases. **Serving**: Real-time filtering, low latency, high availability. **Challenges**: Evolving spam tactics, false positives (blocking important emails), multilingual, adversarial attacks. **Metrics**: Precision (minimize false positives), recall, F1. **User control**: Spam folder, whitelist/blacklist, report spam. **Continuous learning**: Update model with user feedback.
-- Describe how you would implement an image classification system.
+18. Describe how you would implement an image classification system.
   - Answer: **Steps**: (1) **Data Collection** - gather labeled images, ensure diversity, (2) **Preprocessing** - resize, normalize, augmentation (rotation, flip, color jitter), (3) **Model Selection** - CNN architecture (ResNet, EfficientNet, Vision Transformer), (4) **Training** - transfer learning from ImageNet, fine-tune on domain data, (5) **Evaluation** - accuracy, confusion matrix, per-class metrics, (6) **Deployment** - optimize for inference. **Architecture**: Pre-trained backbone → fine-tune top layers → classification head. **Training**: Data augmentation, learning rate scheduling, early stopping, handle class imbalance (weighted loss, oversampling). **Optimization**: Model quantization, pruning, TensorRT for faster inference. **Serving**: REST API, batch processing, or edge deployment. **Monitoring**: Track accuracy, latency, data drift. **Challenges**: Limited labeled data (use semi-supervised, self-supervised), class imbalance, fine-grained classification, adversarial examples. **Tools**: PyTorch/TensorFlow, Hugging Face Transformers, ONNX for deployment.
-- What approach would you take for a sentiment analysis task?
+19. What approach would you take for a sentiment analysis task?
   - Answer: **Approaches**: (1) **Rule-based** - lexicon of positive/negative words (simple, interpretable), (2) **ML** - Logistic Regression, SVM with TF-IDF/n-grams, (3) **Deep Learning** - LSTM, CNN for text, (4) **Transformers** - BERT, RoBERTa (state-of-the-art). **Steps**: (1) **Data** - collect labeled reviews/tweets, (2) **Preprocessing** - lowercase, remove URLs, handle emojis, (3) **Feature extraction** - TF-IDF or embeddings, (4) **Model training** - fine-tune pre-trained BERT, (5) **Evaluation** - accuracy, F1 per class. **Levels**: Document-level (overall sentiment), sentence-level, aspect-based (sentiment toward specific aspects). **Challenges**: Sarcasm, negation ("not good"), context-dependent, domain-specific language. **Fine-tuning**: Use domain-specific data (movie reviews vs. product reviews). **Serving**: Real-time API for customer feedback analysis. **Applications**: Customer reviews, social media monitoring, brand perception. **Tools**: Hugging Face Transformers, spaCy, VADER (rule-based).
-- How would you design a customer churn prediction model?
+20. How would you design a customer churn prediction model?
   - Answer: **Goal**: Predict which customers will leave. **Steps**: (1) **Define churn** - no activity for X days, subscription cancellation, (2) **Feature engineering** - usage patterns, engagement, demographics, support tickets, (3) **Model training** - classification (churn/no churn), (4) **Intervention** - retention campaigns for high-risk users. **Features**: Recency/frequency/monetary (RFM), usage trends (declining activity), customer service interactions, tenure, demographics, product usage, payment history. **Models**: Logistic Regression (interpretable), Gradient Boosting (XGBoost), Neural Networks. **Training**: Historical data with churn labels, handle class imbalance, time-based validation. **Evaluation**: Precision/recall (cost of false positives vs. false negatives), lift curve, ROC-AUC. **Serving**: Batch predictions (daily/weekly), prioritize high-risk customers. **Challenges**: Defining churn, long prediction horizon, changing user behavior. **Business impact**: Retention campaigns, personalized offers, improve product. **Metrics**: Churn rate reduction, retention rate, campaign ROI. **Explainability**: Why customer is at risk (feature importance).
-- What would be your approach to ranking search results?
+21. What would be your approach to ranking search results?
   - Answer: **Components**: (1) **Retrieval** - fetch candidate documents (BM25, semantic search), (2) **Feature Engineering** - query-document relevance signals, (3) **Ranking Model** - score documents, (4) **Re-ranking** - diversity, freshness, personalization. **Features**: Text match (BM25, TF-IDF), semantic similarity (embeddings), document quality (PageRank, authority), user signals (click-through rate, dwell time), personalization (user history), freshness. **Models**: (1) **Learning to Rank** - LambdaMART, RankNet, ListNet, (2) **Neural** - BERT for query-document matching, cross-encoders for re-ranking. **Training**: Click data (implicit feedback), human relevance judgments (explicit), handle position bias. **Evaluation**: NDCG, MRR, MAP, user satisfaction. **Serving**: Two-stage (fast retrieval, expensive re-ranking on top-K), caching, distributed serving. **Challenges**: Query understanding, long-tail queries, spam, freshness vs. relevance. **Personalization**: Balance with diversity, avoid filter bubbles. **A/B testing**: Measure impact on user engagement, task success.
-- How would you build a system to detect anomalies in network traffic?
+22. How would you build a system to detect anomalies in network traffic?
   - Answer: **Goal**: Identify unusual patterns indicating attacks, failures, or fraud. **Approaches**: (1) **Statistical** - threshold on metrics (traffic volume, error rate), (2) **Unsupervised** - Isolation Forest, One-Class SVM, Autoencoders (learn normal, flag deviations), (3) **Supervised** - if labeled attack data available, (4) **Time-series** - ARIMA, LSTM for temporal patterns. **Features**: Traffic volume, packet size distribution, protocol distribution, connection patterns, geographic sources, timing patterns, error rates. **Models**: Autoencoder (reconstruct normal traffic, high reconstruction error = anomaly), Isolation Forest (isolates anomalies), LSTM (temporal patterns). **Training**: Normal traffic data, semi-supervised with few anomaly examples. **Serving**: Real-time streaming (Kafka, Flink), low latency alerts. **Challenges**: High false positive rate, evolving attack patterns, scalability (high traffic volume), rare events. **Evaluation**: Precision/recall, time to detection, false alarm rate. **Response**: Alert security team, automatic blocking, investigation. **Monitoring**: Continuously update model, adapt to new normal patterns.
-- How do you choose the right machine learning algorithm?
+23. How do you choose the right machine learning algorithm?
   - Answer: Consider: (1) **Problem type** - classification, regression, clustering, ranking, (2) **Data size** - small (linear models, trees), large (deep learning), (3) **Feature types** - tabular (XGBoost), images (CNN), text (Transformers), (4) **Interpretability** - need explanation (linear, trees) vs. black box ok (neural networks), (5) **Training time** - fast needed (linear) vs. can wait (deep learning), (6) **Inference latency** - real-time (simple models) vs. batch (complex models), (7) **Data characteristics** - linear (linear models), non-linear (trees, neural nets), (8) **Labeled data** - plenty (supervised), limited (semi-supervised, transfer learning), none (unsupervised). **Process**: Start simple (logistic regression, decision tree), establish baseline, try more complex models, compare performance. **Tabular data**: XGBoost often wins. **Images**: CNNs, Vision Transformers. **Text**: Transformers (BERT, GPT). **Time series**: ARIMA, LSTM. **Don't**: Jump to deep learning without trying simpler models first.
-- What is model drift, and how do you handle it?
+24. What is model drift, and how do you handle it?
   - Answer: **Model drift**: Performance degradation over time as data distribution changes. **Types**: (1) **Data drift (covariate shift)** - input distribution changes (P(X) changes), (2) **Concept drift** - relationship between input and output changes (P(Y|X) changes), (3) **Label drift** - output distribution changes (P(Y) changes). **Causes**: Changing user behavior, seasonality, external events, adversarial adaptation. **Detection**: (1) Monitor performance metrics (accuracy, precision), (2) Statistical tests on feature distributions (KS test, PSI), (3) Compare predictions vs. actuals, (4) Track data statistics. **Handling**: (1) **Retrain regularly** - scheduled (weekly, monthly) or triggered (performance drop), (2) **Online learning** - continuously update with new data, (3) **Ensemble** - combine models from different time periods, (4) **Adaptive models** - adjust to changes automatically, (5) **Feature engineering** - add time-aware features. **Prevention**: Build robust features, monitor continuously, have retraining pipeline ready. **Example**: Fraud detection model becomes less effective as fraudsters adapt tactics.
-- How would you handle large-scale data for training?
+25. How would you handle large-scale data for training?
   - Answer: **Strategies**: (1) **Distributed Training** - split data across multiple machines (data parallelism), use frameworks like Horovod, PyTorch DDP, (2) **Sampling** - train on representative subset, stratified sampling, (3) **Mini-batch training** - process small batches, not entire dataset, (4) **Data pipeline optimization** - efficient loading (TFRecord, Parquet), prefetching, parallel processing, (5) **Feature selection** - reduce dimensionality, keep important features, (6) **Incremental learning** - train on chunks sequentially, (7) **Cloud resources** - use scalable compute (AWS, GCP), (8) **Gradient accumulation** - simulate large batches with limited memory. **Storage**: Distributed file systems (HDFS, S3), columnar formats (Parquet), compression. **Processing**: Spark for preprocessing, Dask for parallel computing. **Models**: Choose scalable algorithms (SGD-based), avoid algorithms requiring full data in memory. **Trade-offs**: Cost vs. time, accuracy vs. computational resources. **Tools**: Ray, Dask, Spark MLlib, Kubeflow.
-- How do you deal with noisy data in machine learning models?
+26. How do you deal with noisy data in machine learning models?
   - Answer: **Strategies**: (1) **Data cleaning** - remove obvious errors, outliers, duplicates, (2) **Robust algorithms** - use models less sensitive to noise (tree-based, ensemble methods), (3) **Outlier detection** - identify and remove/cap extreme values (IQR, Z-score, Isolation Forest), (4) **Regularization** - L1/L2 to prevent overfitting to noise, (5) **Ensemble methods** - averaging reduces noise impact (Random Forest, bagging), (6) **Cross-validation** - detect if model overfits to noise, (7) **Feature engineering** - aggregate features to smooth noise, (8) **Robust loss functions** - Huber loss (less sensitive than MSE), (9) **Data augmentation** - add controlled noise to make model robust, (10) **Label smoothing** - soften hard labels in classification. **Noisy labels**: Use confident learning, co-teaching, or semi-supervised methods. **Validation**: Check if removing suspected noise improves validation performance. **Don't**: Blindly remove data; understand noise source first. **Balance**: Some noise is inevitable; focus on signal.
-- What strategies would you use to optimize the training time for a deep learning model?
+27. What strategies would you use to optimize the training time for a deep learning model?
   - Answer: (1) **Hardware** - use GPUs/TPUs, multiple GPUs (data parallelism), (2) **Mixed precision training** - FP16 instead of FP32 (2x speedup), (3) **Batch size** - increase batch size (better GPU utilization), use gradient accumulation if memory limited, (4) **Data loading** - parallel data loading, prefetching, efficient formats (TFRecord), (5) **Model architecture** - smaller models (MobileNet, DistilBERT), efficient operations, (6) **Gradient checkpointing** - trade computation for memory, (7) **Learning rate** - use learning rate finder, warmup, scheduling for faster convergence, (8) **Early stopping** - stop when validation plateaus, (9) **Transfer learning** - start from pre-trained model, (10) **Distributed training** - model parallelism for large models, (11) **Compilation** - TorchScript, XLA for optimized execution, (12) **Reduce epochs** - use better initialization, data augmentation. **Tools**: Automatic mixed precision (AMP), DeepSpeed, Horovod. **Trade-off**: Speed vs. accuracy, cost vs. time.
-- How do you deploy an ML model in production?
+28. How do you deploy an ML model in production?
   - Answer: **Steps**: (1) **Model serialization** - save trained model (pickle, ONNX, SavedModel), (2) **API development** - wrap model in REST/gRPC API (Flask, FastAPI), (3) **Containerization** - Docker for reproducibility, (4) **Serving infrastructure** - deploy to cloud (AWS SageMaker, GCP AI Platform) or on-premise, (5) **Load balancing** - handle multiple requests, (6) **Monitoring** - track latency, throughput, errors, (7) **Versioning** - manage multiple model versions, (8) **CI/CD** - automated testing and deployment pipeline. **Serving options**: (1) **Batch** - periodic predictions (daily reports), (2) **Real-time** - API endpoint for on-demand predictions, (3) **Streaming** - process data streams (Kafka + Flink), (4) **Edge** - deploy on devices (mobile, IoT). **Optimization**: Model compression (quantization, pruning), caching, batching requests. **Tools**: TensorFlow Serving, TorchServe, MLflow, Seldon, KFServing. **Best practices**: Canary deployment, A/B testing, rollback capability, health checks.
-- How do you monitor a model's performance in production?
+29. How do you monitor a model's performance in production?
   - Answer: **Metrics to track**: (1) **Model metrics** - accuracy, precision, recall, AUC (if ground truth available), (2) **Prediction distribution** - detect drift in outputs, (3) **Feature distribution** - monitor input data changes, (4) **Business metrics** - revenue, conversion, user satisfaction, (5) **System metrics** - latency, throughput, error rate, resource usage. **Monitoring approaches**: (1) **Real-time dashboards** - Grafana, Datadog showing key metrics, (2) **Alerts** - trigger when metrics exceed thresholds, (3) **Logging** - store predictions and features for analysis, (4) **A/B testing** - compare against baseline or new models, (5) **Feedback loops** - collect ground truth labels (user actions, manual review). **Drift detection**: Statistical tests (KS test, PSI) on features and predictions. **Response**: Retrain model, investigate data issues, rollback if severe degradation. **Tools**: MLflow, Weights & Biases, Evidently AI, Fiddler. **Best practice**: Automated alerts, regular performance reviews, incident response plan.
-- How would you deploy a model with low-latency requirements?
+30. How would you deploy a model with low-latency requirements?
   - Answer: **Optimization strategies**: (1) **Model compression** - quantization (INT8), pruning, distillation to smaller model, (2) **Hardware acceleration** - GPUs, specialized chips (TPU, AWS Inferentia), (3) **Batching** - process multiple requests together (increases throughput), (4) **Caching** - cache common predictions, (5) **Model simplification** - use simpler architecture if acceptable, (6) **Compilation** - TensorRT, ONNX Runtime for optimized inference, (7) **Serving framework** - use optimized servers (TensorFlow Serving, TorchServe, Triton), (8) **Load balancing** - distribute requests across instances, (9) **Edge deployment** - deploy closer to users, (10) **Asynchronous processing** - return immediately, process in background if possible. **Architecture**: Two-stage (fast model for most, complex for hard cases), cascade models. **Monitoring**: Track P50, P95, P99 latency. **Trade-offs**: Latency vs. accuracy, cost vs. performance. **Target**: <100ms for user-facing, <10ms for real-time systems. **Testing**: Load testing, stress testing before production.
-- What are the common challenges when deploying ML models?
+31. What are the common challenges when deploying ML models?
   - Answer: (1) **Model-data mismatch** - training data differs from production data, (2) **Latency** - model too slow for real-time requirements, (3) **Scalability** - handling high request volume, (4) **Model drift** - performance degrades over time, (5) **Reproducibility** - different results in production vs. development, (6) **Dependency management** - library versions, environment setup, (7) **Monitoring** - detecting issues in production, (8) **Versioning** - managing multiple model versions, (9) **A/B testing** - safely testing new models, (10) **Explainability** - understanding predictions for debugging/compliance, (11) **Security** - protecting model from adversarial attacks, (12) **Cost** - inference costs at scale, (13) **Integration** - connecting with existing systems, (14) **Feedback loops** - collecting ground truth for retraining. **Solutions**: MLOps practices, containerization, monitoring tools, automated pipelines, gradual rollouts. **Prevention**: Test thoroughly, monitor closely, have rollback plan.
-- Discuss scalability and latency requirements for ML systems.
+32. Discuss scalability and latency requirements for ML systems.
   - Answer: **Scalability**: Ability to handle increasing load. **Horizontal scaling** - add more servers (preferred for ML), **Vertical scaling** - bigger servers (limited). **Strategies**: (1) Load balancing across instances, (2) Auto-scaling based on demand, (3) Caching frequent predictions, (4) Batch processing where possible, (5) Asynchronous processing, (6) Model optimization (smaller, faster). **Latency**: Time from request to response. **Requirements vary**: User-facing (<100ms), Background tasks (seconds/minutes), Batch processing (hours). **Optimization**: (1) Model compression, (2) Hardware acceleration, (3) Efficient serving frameworks, (4) Request batching, (5) Edge deployment. **Trade-offs**: Latency vs. accuracy (simpler models faster), cost vs. performance (more resources = lower latency), scalability vs. complexity. **Monitoring**: Track P50, P95, P99 latency, requests per second, resource utilization. **Architecture**: Consider two-stage (fast + accurate), caching layers, CDN for edge deployment. **Planning**: Estimate peak load, plan capacity, load test before launch.
-- How do you ensure your model is scalable and performs well with large datasets?
+33. How do you ensure your model is scalable and performs well with large datasets?
   - Answer: **Design choices**: (1) **Algorithm selection** - choose scalable algorithms (SGD-based, tree-based), avoid O(n²) algorithms, (2) **Distributed training** - data parallelism, model parallelism, (3) **Mini-batch processing** - don't load entire dataset, (4) **Efficient data structures** - sparse matrices, columnar formats (Parquet), (5) **Feature engineering** - reduce dimensionality, select important features, (6) **Sampling** - train on representative subset if needed, (7) **Incremental learning** - update model with new data without full retraining. **Infrastructure**: (1) Distributed storage (HDFS, S3), (2) Distributed computing (Spark, Dask), (3) Cloud resources (auto-scaling), (4) GPU clusters for deep learning. **Optimization**: (1) Vectorized operations, (2) Parallel data loading, (3) Caching intermediate results, (4) Profiling to find bottlenecks. **Testing**: Benchmark on increasing data sizes, monitor memory usage, measure training time scaling. **Trade-offs**: Accuracy vs. computational cost, exact vs. approximate algorithms. **Tools**: Ray, Horovod, Spark MLlib, Dask-ML.
-- What is model explainability? Why is it important?
+34. What is model explainability? Why is it important?
   - Answer: **Model explainability**: Understanding why a model makes specific predictions. **Importance**: (1) **Trust** - users trust models they understand, (2) **Debugging** - identify model errors and biases, (3) **Compliance** - regulations (GDPR, fair lending) require explanations, (4) **Fairness** - detect discriminatory patterns, (5) **Improvement** - insights guide feature engineering, (6) **Stakeholder communication** - explain to non-technical users, (7) **Safety** - critical in healthcare, finance, autonomous systems. **Levels**: (1) **Global** - overall model behavior, (2) **Local** - specific prediction explanation. **Trade-off**: Complex models (neural networks) more accurate but less interpretable than simple models (linear regression, decision trees). **Use cases**: Medical diagnosis (why this treatment?), loan rejection (why denied?), fraud detection (why flagged?). **Regulatory**: EU's "right to explanation", fair lending laws. **Balance**: Sometimes need to sacrifice some accuracy for interpretability in high-stakes domains.
-- What techniques would you use to make a model more interpretable?
+35. What techniques would you use to make a model more interpretable?
   - Answer: **Model-agnostic methods**: (1) **SHAP (SHapley Additive exPlanations)** - feature importance for each prediction, (2) **LIME (Local Interpretable Model-agnostic Explanations)** - local linear approximation, (3) **Partial Dependence Plots** - show feature effect on predictions, (4) **Feature importance** - global importance scores, (5) **Counterfactual explanations** - what changes would flip prediction. **Model-specific**: (1) **Linear models** - coefficient interpretation, (2) **Decision trees** - visualize decision path, (3) **Attention weights** - for Transformers, show what model focuses on. **Simplification**: (1) **Model distillation** - train interpretable model to mimic complex one, (2) **Rule extraction** - extract if-then rules from model. **Visualization**: (1) **Saliency maps** - highlight important image regions, (2) **Activation maximization** - visualize what neurons detect. **Documentation**: (1) **Model cards** - document intended use, limitations, (2) **Datasheets** - document training data. **Tools**: SHAP, LIME, InterpretML, Captum, What-If Tool. **Best practice**: Combine multiple techniques for comprehensive understanding.
-- Describe your approach to debugging an underperforming ML model.
+36. Describe your approach to debugging an underperforming ML model.
   - Answer: **Systematic approach**: (1) **Define "underperforming"** - which metric, compared to what baseline, (2) **Check data** - correct labels, no leakage, representative of production, (3) **Error analysis** - examine misclassified examples, find patterns, (4) **Feature analysis** - check distributions, missing values, correlations, (5) **Model complexity** - too simple (underfitting) or too complex (overfitting), (6) **Learning curves** - plot train/val performance vs. data size/epochs, (7) **Hyperparameters** - try different values, (8) **Compare baselines** - simple model, random, human performance. **Common issues**: (1) **Data problems** - insufficient, noisy, biased, label errors, (2) **Feature problems** - irrelevant features, missing important ones, wrong encoding, (3) **Model problems** - wrong architecture, poor hyperparameters, (4) **Training problems** - not converged, learning rate issues, (5) **Evaluation problems** - wrong metric, data leakage, test set not representative. **Tools**: Confusion matrix, feature importance, SHAP values, visualization. **Iterate**: Fix one issue at a time, measure impact, document findings.
 - How do you ensure fairness and reduce bias in ML models?
-- Explain MLOps and its key components.
+37. Explain MLOps and its key components.
   - Answer: **MLOps**: Practices for deploying and maintaining ML systems in production reliably and efficiently. Combines ML, DevOps, and Data Engineering. **Key components**: (1) **Version control** - code, data, models (Git, DVC), (2) **Experiment tracking** - log metrics, parameters, artifacts (MLflow, W&B), (3) **Data pipeline** - automated data collection, validation, preprocessing, (4) **Model training** - reproducible training pipelines, distributed training, (5) **Model registry** - centralized model storage with versioning, (6) **CI/CD** - automated testing, deployment pipelines, (7) **Serving** - scalable model deployment (APIs, batch, streaming), (8) **Monitoring** - performance, drift, system metrics, (9) **Feedback loops** - collect ground truth, retrain triggers, (10) **Governance** - access control, audit trails, compliance. **Benefits**: Faster deployment, reproducibility, reliability, collaboration. **Tools**: Kubeflow, MLflow, Airflow, Kubernetes, Docker. **Culture**: Collaboration between data scientists, engineers, operations. **Goal**: Treat ML models like software products with proper engineering practices.
-- What is a feature store, and why is it important?
+38. What is a feature store, and why is it important?
   - Answer: **Feature store**: Centralized repository for storing, managing, and serving ML features. **Components**: (1) **Feature registry** - catalog of available features with metadata, (2) **Offline store** - historical features for training (data warehouse), (3) **Online store** - low-latency features for inference (key-value store), (4) **Feature computation** - pipelines to compute features, (5) **Feature serving** - APIs to retrieve features. **Benefits**: (1) **Reusability** - share features across teams/models, (2) **Consistency** - same features for training and serving (no train-serve skew), (3) **Efficiency** - compute once, use many times, (4) **Discoverability** - find existing features, (5) **Monitoring** - track feature quality, drift, (6) **Governance** - access control, lineage tracking. **Example**: User features (age, location, purchase history) computed once, used by recommendation, fraud detection, personalization models. **Tools**: Feast, Tecton, AWS Feature Store, Databricks Feature Store. **Use case**: Large organizations with multiple ML models sharing features. **Alternative**: For small teams, simpler solutions may suffice.
-- Cloud vs on-device Model Deployment.
+39. Cloud vs on-device Model Deployment.
   - Answer: **Cloud deployment**: Model runs on remote servers. **Pros**: (1) Powerful hardware (GPUs), (2) Easy updates (deploy new model instantly), (3) No device constraints, (4) Centralized monitoring, (5) Can use large models. **Cons**: (1) Requires internet, (2) Latency (network round-trip), (3) Privacy concerns (data sent to cloud), (4) Ongoing costs (compute, bandwidth). **On-device deployment**: Model runs on user's device (phone, IoT). **Pros**: (1) Works offline, (2) Low latency (no network), (3) Privacy (data stays on device), (4) No inference costs, (5) Scales with users. **Cons**: (1) Limited compute/memory, (2) Harder updates (app updates), (3) Model must be small, (4) Fragmented devices, (5) Harder monitoring. **Hybrid**: Process on device when possible, fall back to cloud for complex cases. **Choose based on**: Latency requirements, privacy needs, connectivity, model size, cost. **Examples**: Cloud - search, recommendations. On-device - keyboard prediction, face unlock.
-- Tell about the Model Compression Techniques.
+40. Tell about the Model Compression Techniques.
   - Answer: **Goal**: Reduce model size and inference time while maintaining accuracy. **Techniques**: (1) **Quantization** - reduce precision (FP32 → INT8/INT4), 4x smaller, 2-4x faster, minimal accuracy loss, (2) **Pruning** - remove unimportant weights/neurons, structured (entire channels) or unstructured (individual weights), (3) **Knowledge Distillation** - train small "student" model to mimic large "teacher" model, (4) **Low-rank factorization** - decompose weight matrices into smaller matrices, (5) **Weight sharing** - multiple weights share same value, (6) **Neural Architecture Search** - find efficient architectures (MobileNet, EfficientNet). **Quantization types**: Post-training (easy, slight accuracy drop), Quantization-aware training (better accuracy). **Benefits**: Deploy on edge devices, faster inference, lower costs, reduced energy. **Trade-offs**: Accuracy vs. size/speed. **Tools**: TensorFlow Lite, PyTorch Mobile, ONNX Runtime, TensorRT. **Use cases**: Mobile apps, IoT devices, real-time systems. **Typical results**: 4x smaller, 2-3x faster with <1% accuracy loss.
 
 ### Coding
 
-- Write a Python function to compute the mean squared error (MSE).
+1. Write a Python function to compute the mean squared error (MSE).
   - Answer: ```python
     def mean_squared_error(y_true, y_pred):
     """
@@ -2818,7 +2818,7 @@ print(f"MSE: {mean_squared_error(y_true, y_pred)}") # Output: 0.375
 
 ````
 
-- Write a Python function to compute the mean absolute error (MAE).
+2. Write a Python function to compute the mean absolute error (MAE).
   - Answer: ```python
 def mean_absolute_error(y_true, y_pred):
     """
@@ -2837,7 +2837,7 @@ y_pred = [2.5, 0.0, 2, 8]
 print(f"MAE: {mean_absolute_error(y_true, y_pred)}")  # Output: 0.5
 ````
 
-- Implement a simple linear regression model from scratch.
+3. Implement a simple linear regression model from scratch.
   - Answer: ```python
     import numpy as np
 
@@ -2878,7 +2878,7 @@ predictions = model.predict(X)
 
 ````
 
-- Implement a simple logistic regression model from scratch.
+4. Implement a simple logistic regression model from scratch.
   - Answer: ```python
 import numpy as np
 
@@ -2922,7 +2922,7 @@ model = LogisticRegression()
 model.fit(X, y)
 ````
 
-- Implement K-Nearest Neighbors (KNN).
+5. Implement K-Nearest Neighbors (KNN).
   - Answer: ```python
     import numpy as np
     from collections import Counter
@@ -2966,7 +2966,7 @@ predictions = knn.predict(X_test)
 
 ````
 
-- Implement Sigmoid, Tanh, ReLU, LeakyReLU, and Softmax Activation Functions.
+6. Implement Sigmoid, Tanh, ReLU, LeakyReLU, and Softmax Activation Functions.
   - Answer: ```python
 import numpy as np
 
@@ -3000,7 +3000,7 @@ print(f"Leaky ReLU: {leaky_relu(x)}")
 print(f"Softmax: {softmax(x)}")
 ````
 
-- How would you implement k-means clustering?
+7. How would you implement k-means clustering?
   - Answer: ```python
     import numpy as np
 
@@ -3050,7 +3050,7 @@ labels = kmeans.fit(X)
 
 ````
 
-- Write code to perform k-fold cross-validation.
+8. Write code to perform k-fold cross-validation.
   - Answer: ```python
 import numpy as np
 from sklearn.model_selection import KFold
@@ -3112,7 +3112,7 @@ print(f"CV Scores: {scores}")
 print(f"Mean Score: {np.mean(scores):.3f} (+/- {np.std(scores):.3f})")
 ````
 
-- How would you use Pandas to load and clean data?
+9. How would you use Pandas to load and clean data?
   - Answer: ```python
     import pandas as pd
     import numpy as np
@@ -3179,10 +3179,10 @@ df.to_csv('cleaned_data.csv', index=False)
 
 ````
 
-- Implement k-nearest neighbors (KNN) from scratch.
+10. Implement k-nearest neighbors (KNN) from scratch.
   - Answer: See the KNN implementation above (already provided in detail).
 
-- Write code to calculate precision and recall.
+11. Write code to calculate precision and recall.
   - Answer: ```python
 import numpy as np
 
@@ -3234,22 +3234,22 @@ f1 = f1_score(y_true, y_pred)
 ### Behavioral and Scenario-Based Questions
 
 - Describe a time you improved a model’s performance.
-- How would you approach a project with limited labeled data?
+1. How would you approach a project with limited labeled data?
   - Answer: "I would use multiple strategies: (1) **Transfer learning** - leverage pre-trained models and fine-tune on our small dataset, (2) **Data augmentation** - for images (rotation, flipping), for text (back-translation, synonym replacement), (3) **Semi-supervised learning** - use unlabeled data with techniques like pseudo-labeling or consistency regularization, (4) **Active learning** - intelligently select most informative samples for labeling, (5) **Few-shot learning** - use meta-learning approaches if applicable, (6) **Synthetic data generation** - use GANs or rule-based methods, (7) **Feature engineering** - create strong features to compensate for limited data, (8) **Simpler models** - avoid overfitting with regularization and cross-validation, (9) **Domain expert collaboration** - get high-quality labels for critical examples. I'd also explore if similar datasets exist that could be used for pre-training."
-- What would you do if a model performs well in testing but poorly in production?
+2. What would you do if a model performs well in testing but poorly in production?
   - Answer: "This indicates a train-test mismatch. I would: (1) **Investigate data distribution** - compare training vs. production data distributions, check for data drift, (2) **Check for data leakage** - ensure no future information leaked into training, (3) **Verify feature pipeline** - confirm features are computed identically in training and production, (4) **Examine edge cases** - production may have scenarios not in test set, (5) **Monitor predictions** - log predictions and features to identify patterns in failures, (6) **A/B test carefully** - start with small traffic percentage, (7) **Collect production labels** - gather ground truth from production to retrain, (8) **Check temporal factors** - model may not handle time-based changes, (9) **Review preprocessing** - ensure same normalization, encoding in production. I'd also implement monitoring to catch this earlier next time and establish a feedback loop for continuous improvement."
-- How do you stay updated with ML advancements?
+3. How do you stay updated with ML advancements?
   - Answer: "I use multiple channels: (1) **Research papers** - follow arXiv, read papers from top conferences (NeurIPS, ICML, CVPR), (2) **Online courses** - take courses on Coursera, fast.ai when new techniques emerge, (3) **Technical blogs** - follow Google AI Blog, OpenAI, DeepMind, Distill.pub, (4) **Podcasts** - listen to Lex Fridman, TWIML AI during commute, (5) **Twitter/LinkedIn** - follow ML researchers and practitioners, (6) **GitHub** - explore trending ML repositories, contribute to open source, (7) **Conferences** - attend or watch recordings of major ML conferences, (8) **Reading groups** - participate in paper reading sessions with colleagues, (9) **Hands-on projects** - implement new techniques in side projects, (10) **Newsletters** - subscribe to The Batch, Import AI. I dedicate 3-5 hours weekly to learning and try to implement at least one new technique per month in my work."
-- Tell me about a challenging ML project you worked on. What was the goal? What was your role? What challenges did you face? How did you overcome them? What was the outcome? What did you learn?
+4. Tell me about a challenging ML project you worked on. What was the goal? What was your role? What challenges did you face? How did you overcome them? What was the outcome? What did you learn?
   - Answer: **Use STAR method with detail**: **Situation**: "At [Company], we needed to build a real-time fraud detection system processing 10K transactions/second." **Task**: "As the ML lead, I was responsible for the entire ML pipeline from data collection to deployment." **Challenges**: "(1) Extreme class imbalance (0.1% fraud), (2) Sub-100ms latency requirement, (3) Adversarial environment with evolving fraud patterns, (4) Limited labeled data for new fraud types." **Actions**: "I designed a two-stage system: fast rule-based filter + ML model for borderline cases. Used XGBoost with careful feature engineering (velocity features, network analysis). Addressed imbalance with SMOTE and focal loss. Implemented online learning for adaptation. Optimized inference with model quantization and caching." **Outcome**: "Achieved 95% precision, 87% recall, 45ms P95 latency. Caught $5M in fraud in first quarter while maintaining low false positive rate. System handled Black Friday traffic without issues." **Learnings**: "Importance of system design alongside ML, value of domain expert collaboration, need for continuous monitoring and adaptation in adversarial settings."
-- Where do you see ML/AI heading in the next 5 years?
+5. Where do you see ML/AI heading in the next 5 years?
   - Answer: "I see several key trends: (1) **Multimodal AI** - models that seamlessly understand text, images, video, audio together, (2) **Smaller, efficient models** - focus on efficiency through distillation, quantization for edge deployment, (3) **AI agents** - systems that can plan, use tools, and accomplish complex tasks autonomously, (4) **Personalization** - models that adapt to individual users while preserving privacy, (5) **Explainability** - better interpretability tools as AI is used in critical decisions, (6) **Democratization** - easier tools making ML accessible to non-experts, (7) **Regulation** - more governance around AI safety, bias, privacy, (8) **Domain-specific models** - specialized models for healthcare, finance, science, (9) **Continuous learning** - models that adapt in real-time without full retraining, (10) **Human-AI collaboration** - AI augmenting rather than replacing human decision-making. I'm particularly excited about applications in healthcare and scientific discovery."
-- Why are you interested in this role/company?
+6. Why are you interested in this role/company?
   - Answer: **Customize to the company, but structure**: "I'm excited about this role for three main reasons: (1) **Technical challenge** - [specific problem the company works on] aligns with my experience in [your expertise] and pushes me to grow in [area you want to develop], (2) **Impact** - [company's mission/product] directly affects [users/industry], and I'm passionate about [related cause]. The scale of [specific metric] means my work would have meaningful impact, (3) **Team and culture** - I'm impressed by [specific thing about team - papers published, open source contributions, engineering blog posts]. The emphasis on [company value] resonates with my approach to [relevant value]. Additionally, I've been following [specific product/research] and am excited to contribute to [specific initiative]. I see this as an opportunity to work on cutting-edge ML while delivering real business value."
-- Describe a situation where your ML model failed or didn't perform as expected. What did you do?
+7. Describe a situation where your ML model failed or didn't perform as expected. What did you do?
   - Answer: "In a recommendation system project, our model showed great offline metrics (NDCG of 0.85) but A/B test showed no improvement in user engagement. **Investigation**: I analyzed user behavior logs and found the model was recommending technically relevant but uninteresting content. It optimized for similarity but not engagement. **Root cause**: Training data was implicit (clicks) but didn't capture negative signals (quick exits, no engagement). **Actions**: (1) Redefined the objective to predict watch time instead of clicks, (2) Added negative sampling from skipped content, (3) Incorporated diversity and freshness constraints, (4) Collected explicit feedback through surveys, (5) Implemented multi-objective optimization balancing relevance, diversity, and novelty. **Outcome**: Second iteration showed 12% increase in watch time and 8% increase in user satisfaction scores. **Learning**: Offline metrics don't always correlate with business goals. Always validate with A/B tests and user research. Importance of defining the right objective function aligned with business metrics."
-- How would you handle disagreements with colleagues about model choices or approaches?
+8. How would you handle disagreements with colleagues about model choices or approaches?
   - Answer: "I believe disagreements are opportunities for better solutions. My approach: (1) **Listen actively** - understand their perspective and reasoning fully before responding, (2) **Data-driven discussion** - propose running experiments to test both approaches objectively, (3) **Define success criteria** - agree on metrics and evaluation methodology upfront, (4) **Prototype both** - if feasible, implement both approaches on a small scale, (5) **Consider trade-offs** - discuss pros/cons: accuracy vs. interpretability, complexity vs. maintainability, (6) **Seek diverse input** - involve other team members or domain experts, (7) **Document reasoning** - write down assumptions and expected outcomes, (8) **Be open to being wrong** - focus on finding the best solution, not winning the argument, (9) **Learn from results** - whoever's approach works, understand why. Example: Once disagreed on using deep learning vs. XGBoost. We ran parallel experiments with same data splits. XGBoost won on our tabular data, but the discussion led to better feature engineering that improved both approaches. The key is maintaining respect and focusing on shared goals."
 
-- Describe a time you improved a model's performance.
+9. Describe a time you improved a model's performance.
   - Answer: **Structure your answer using STAR method**: **Situation**: "In my previous role, we had a customer churn prediction model with 72% accuracy that wasn't meeting business needs." **Task**: "I was tasked with improving the model to at least 80% accuracy within a month." **Action**: "I conducted thorough error analysis and found the model struggled with recently joined customers. I engineered new features including engagement velocity, early behavior patterns, and cohort-based features. I also addressed class imbalance using SMOTE and switched from logistic regression to XGBoost. Finally, I performed hyperparameter tuning using Bayesian optimization." **Result**: "The model accuracy improved to 84%, precision increased from 68% to 79%, and the business reported 15% reduction in churn through targeted interventions. This translated to $2M in retained revenue annually." **Key points**: Be specific with metrics, explain your thought process, show business impact.
